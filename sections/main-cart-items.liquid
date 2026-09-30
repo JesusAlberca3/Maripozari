@@ -36,6 +36,9 @@
         {{- 'general.continue_shopping' | t -}}
       </a>
     </div>
+    {%- if cart != empty -%}
+      <p class="maripozari-cart-note">{{ 'maripozari.filled_cart_note' | t }}</p>
+    {%- endif -%}
 
     <div class="cart__warnings maripozari-empty">
       <img

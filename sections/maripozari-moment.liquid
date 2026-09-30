@@ -1,0 +1,100 @@
+<section class="maripozari-moment{% if section.settings.image_position == 'right' %} maripozari-moment--image-right{% endif %}">
+  <div class="page-width">
+    <div class="maripozari-moment__inner">
+      <div class="maripozari-moment__media">
+        {%- liquid
+          case section.settings.image
+            when 'hat'
+              assign moment_image = 'creature-hat.png'
+            when 'mushroom'
+              assign moment_image = 'creature-empty-cart.png'
+            when 'butterfly'
+              assign moment_image = 'creature-surprise.png'
+            else
+              assign moment_image = 'creature-surprise.png'
+          endcase
+        -%}
+        <img
+          src="{{ moment_image | asset_url }}"
+          width="280"
+          height="220"
+          alt=""
+        >
+      </div>
+      <div>
+        {%- if section.settings.heading != blank -%}
+          <h2 class="maripozari-moment__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="maripozari-moment__text rte">{{ section.settings.text }}</div>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <a class="button button--secondary" href="{{ section.settings.button_link | default: routes.root_url }}">
+            {{ section.settings.button_label }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Momento Maripozari",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "image",
+      "label": "Ilustración",
+      "options": [
+        { "value": "butterfly", "label": "Mariposa" },
+        { "value": "hat", "label": "Sombrero" },
+        { "value": "mushroom", "label": "Hongo" }
+      ],
+      "default": "butterfly"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Posición de la imagen",
+      "options": [
+        { "value": "left", "label": "Izquierda" },
+        { "value": "right", "label": "Derecha" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "Un sticker del bosque"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texto",
+      "default": "<p>Con la compra puede venir un sticker que no se elige. Aparece cuando hay stock.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Botón"
+    },
+    {
+      "type": "text",
+      "id": "button_link",
+      "label": "Ruta del botón"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Momento Maripozari"
+    }
+  ]
+}
+{% endschema %}

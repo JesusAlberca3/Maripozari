@@ -21,7 +21,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Maripozari vende blind box y figuras coleccionables, sobre todo Hirono, Pop Mart y otras líneas de diseño asiático.</p><p>La tienda se queda en blanco, negro y gris para no competir con las cajas. El color, el bosque y el misterio viven en lo que se abre.</p>"
+            "text": "<p>Maripozari vende blind box y figuras coleccionables: Hirono, Pop Mart y otras líneas de diseño asiático.</p><p>La página es blanca a propósito. El color, el bosque y el misterio viven en lo que se abre.</p>"
           }
         }
       },
@@ -87,8 +87,8 @@
       "type": "maripozari-about",
       "settings": {
         "show_logo": true,
-        "heading": "Sin competir con la caja",
-        "text": "<p>En la feria el letrero es blanco a propósito. Aquí pasa lo mismo: el marco es austero para que la figura sea la que tiene color.</p>",
+        "heading": "El color se queda en la caja",
+        "text": "<p>En la feria el letrero es blanco. Aquí pasa lo mismo: el marco deja que la figura sea la que tiene color.</p>",
         "button_label": "Ver el catálogo",
         "button_link": "shopify://collections/all",
         "color_scheme": "scheme-1"

@@ -19,7 +19,7 @@
         "mystery": {
           "type": "text",
           "settings": {
-            "text": "Caja sellada. El diseño de adentro es al azar, dentro de la serie.",
+            "text": "Caja sellada. Adentro hay un diseño al azar de esta serie.",
             "text_style": "body"
           }
         },
@@ -60,7 +60,7 @@
           "settings": {
             "heading": "La sorpresa",
             "icon": "question_mark",
-            "content": "<p>No se elige el personaje. Cada caja trae un diseño de la serie, al azar. Las fotos de la ficha muestran la línea, no una promesa de cuál figura te toca.</p><p>Para que el badge Sorpresa aparezca en el catálogo, etiqueta el producto con <em>blind-box</em> o <em>sorpresa</em>.</p>"
+            "content": "<p>No se elige el personaje. Cada caja trae un diseño de la serie, al azar. Las fotos muestran la línea, no la figura que te va a tocar.</p>"
           }
         },
         "tab_envio": {
@@ -68,7 +68,7 @@
           "settings": {
             "heading": "Envío",
             "icon": "truck",
-            "content": "<p>El costo y el plazo aparecen al pagar, según la dirección. Si la caja llega dañada, escribe con fotos del empaque y de la pieza.</p>"
+            "content": "<p>El costo y el plazo aparecen al pagar, según tu dirección. Si llega dañada, escríbenos con fotos del empaque y de la pieza.</p>"
           }
         },
         "tab_cambios": {
@@ -76,7 +76,7 @@
           "settings": {
             "heading": "Cambios",
             "icon": "return",
-            "content": "<p>Texto base para editar. Que salga otro diseño de la misma serie no es un defecto. Un daño de transporte sí se revisa.</p>"
+            "content": "<p>Que salga otro diseño de la misma serie es la sorpresa. Si el empaque llega dañado, lo revisamos con fotos.</p>"
           }
         },
         "share": {
@@ -124,6 +124,17 @@
         "padding_bottom": 0
       }
     },
+    "moment": {
+      "type": "maripozari-moment",
+      "settings": {
+        "image": "butterfly",
+        "image_position": "left",
+        "heading": "La sorpresa es el diseño",
+        "text": "<p>No eliges el personaje. Eliges la serie, y la caja llega cerrada. A veces viene un sticker del bosque, cuando hay stock.</p>",
+        "button_label": "Ver más cajas",
+        "button_link": "/collections/blind-box"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -143,5 +154,5 @@
       }
     }
   },
-  "order": ["main", "disclosures", "related-products"]
+  "order": ["main", "moment", "disclosures", "related-products"]
 }

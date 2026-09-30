@@ -23,7 +23,7 @@
             "icon_1": "star",
             "heading_1": "Pieza coleccionable",
             "icon_2": "box",
-            "heading_2": "Revisa si es caja sellada",
+            "heading_2": "Mira si la caja va sellada",
             "icon_3": "truck",
             "heading_3": "El envío se calcula al pagar"
           }
@@ -53,7 +53,7 @@
           "settings": {
             "heading": "Envío",
             "icon": "truck",
-            "content": "<p>El costo y el plazo aparecen al pagar, según la dirección. Si la caja llega dañada, escribe con fotos del empaque y de la pieza.</p>"
+            "content": "<p>El costo y el plazo aparecen al pagar, según tu dirección. Si llega dañada, escríbenos con fotos del empaque y de la pieza.</p>"
           }
         },
         "tab_cuidado": {
@@ -61,7 +61,7 @@
           "settings": {
             "heading": "Cuidado",
             "icon": "leaf",
-            "content": "<p>Guárdala lejos del sol directo y de la humedad. Si la caja está sellada, ábrela cuando quieras: el misterio puede esperar.</p>"
+            "content": "<p>Lejos del sol directo y de la humedad. Si la caja está sellada, puedes guardarla cerrada: el misterio espera.</p>"
           }
         },
         "tab_cambios": {
@@ -69,7 +69,7 @@
           "settings": {
             "heading": "Cambios",
             "icon": "return",
-            "content": "<p>Texto base para editar cuando cierres la política. En una blind box, que salga otro diseño de la misma serie no es un defecto: es la sorpresa. Un daño de transporte sí se revisa.</p>"
+            "content": "<p>En una blind box, que salga otro diseño de la misma serie es la sorpresa. Si el empaque llega dañado, lo revisamos con fotos.</p>"
           }
         },
         "share": {
@@ -116,10 +116,21 @@
         "padding_bottom": 0
       }
     },
+    "moment": {
+      "type": "maripozari-moment",
+      "settings": {
+        "image": "hat",
+        "image_position": "left",
+        "heading": "Coleccionar con calma",
+        "text": "<p>Cada ficha dice la línea y si la caja va sellada. El blanco de la tienda deja el color en la figura.</p>",
+        "button_label": "Cómo funciona",
+        "button_link": "/pages/como-funciona"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "También en la colección",
+        "heading": "Sigue en la colección",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -135,5 +146,5 @@
       }
     }
   },
-  "order": ["main", "disclosures", "related-products"]
+  "order": ["main", "moment", "disclosures", "related-products"]
 }

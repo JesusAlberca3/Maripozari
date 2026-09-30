@@ -19,7 +19,7 @@
         "note": {
           "type": "text",
           "settings": {
-            "text": "Figura a la vista. Esta ficha no es una caja ciega.",
+            "text": "Figura a la vista. Lo de las fotos es lo que sale.",
             "text_style": "body"
           }
         },
@@ -60,7 +60,7 @@
           "settings": {
             "heading": "La pieza",
             "icon": "check_mark",
-            "content": "<p>Lo que ves en las fotos es lo que sale. Anota en la descripción la línea, la escala y si incluye base o accesorio.</p>"
+            "content": "<p>Lo que ves en las fotos es lo que sale. En la descripción van la línea, la escala y si incluye base o accesorio.</p>"
           }
         },
         "tab_cuidado": {
@@ -68,7 +68,7 @@
           "settings": {
             "heading": "Cuidado",
             "icon": "leaf",
-            "content": "<p>Lejos del sol directo y de la humedad. Las cajas de vitrina se guardan cerradas si quieres conservar el empaque.</p>"
+            "content": "<p>Lejos del sol directo y de la humedad. Si quieres conservar el empaque, guarda la caja cerrada.</p>"
           }
         },
         "tab_envio": {
@@ -76,7 +76,7 @@
           "settings": {
             "heading": "Envío y cambios",
             "icon": "truck",
-            "content": "<p>El costo y el plazo aparecen al pagar. Si llega dañada, escribe con fotos. Este texto se edita cuando cierres la política de cambios.</p>"
+            "content": "<p>El costo y el plazo aparecen al pagar. Si llega dañada, escríbenos con fotos del empaque y de la pieza.</p>"
           }
         },
         "share": {
@@ -124,6 +124,17 @@
         "padding_bottom": 0
       }
     },
+    "moment": {
+      "type": "maripozari-moment",
+      "settings": {
+        "image": "hat",
+        "image_position": "left",
+        "heading": "Esta pieza se ve",
+        "text": "<p>No es una caja ciega. Las fotos son la figura que sale, con su línea y su empaque.</p>",
+        "button_label": "Ver figuras",
+        "button_link": "/collections/figuras"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -143,5 +154,5 @@
       }
     }
   },
-  "order": ["main", "disclosures", "related-products"]
+  "order": ["main", "moment", "disclosures", "related-products"]
 }

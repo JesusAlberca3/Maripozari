@@ -300,3 +300,215 @@ h1,
 .maripozari-footer-nav__list a:hover {
   text-decoration: underline;
 }
+
+.maripozari-banner {
+  padding: 2.4rem 0 1.2rem;
+}
+
+.maripozari-banner__panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+  align-items: center;
+  border: 0.1rem solid rgb(var(--color-ink));
+  padding: 2.8rem 2rem;
+  background: rgb(var(--color-paper));
+}
+
+@media screen and (min-width: 990px) {
+  .maripozari-banner__panel {
+    grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.7fr);
+    gap: 4rem;
+    min-height: 42rem;
+    padding: 4.8rem 5.6rem;
+  }
+}
+
+.maripozari-banner__eyebrow {
+  margin: 0 0 1.2rem;
+  color: rgb(var(--color-ash));
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.maripozari-banner__heading {
+  margin: 0 0 1.6rem;
+  font-family: var(--font-display-family);
+  font-size: clamp(4rem, 7vw, 7.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.maripozari-banner__text {
+  margin: 0 0 2.4rem;
+  max-width: 46rem;
+  color: rgb(var(--color-ash));
+  font-size: 1.6rem;
+}
+
+.maripozari-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.maripozari-banner__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.maripozari-banner__visual img {
+  width: min(280px, 70vw);
+  height: auto;
+}
+
+.maripozari-steps {
+  padding: 1.6rem 0 4.8rem;
+}
+
+.maripozari-steps__heading {
+  margin: 0 0 2rem;
+  font-family: var(--font-display-family);
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  font-weight: 400;
+}
+
+.maripozari-steps__list {
+  display: grid;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .maripozari-steps__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.maripozari-steps__list li {
+  border-top: 0.1rem solid rgb(var(--color-ink));
+  padding-top: 1.6rem;
+}
+
+.maripozari-steps__index {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-family: var(--font-display-family);
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.maripozari-steps__list h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.maripozari-steps__list p {
+  margin: 0;
+  color: rgb(var(--color-ash));
+}
+
+.maripozari-moment {
+  padding: 2rem 0 5rem;
+}
+
+.maripozari-moment__inner {
+  display: grid;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 750px) {
+  .maripozari-moment__inner {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr);
+    gap: 4.8rem;
+  }
+
+  .maripozari-moment--image-right .maripozari-moment__media {
+    order: 2;
+  }
+}
+
+.maripozari-moment__media img {
+  width: min(280px, 70%);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.maripozari-moment__heading {
+  margin: 0 0 1.2rem;
+  font-family: var(--font-display-family);
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  font-weight: 400;
+}
+
+.maripozari-moment__text {
+  margin: 0 0 2rem;
+  max-width: 46rem;
+  color: rgb(var(--color-ash));
+}
+
+.maripozari-cart-note {
+  margin: 0 0 2.4rem;
+  max-width: 52rem;
+  color: rgb(var(--color-ash));
+}
+
+.drawer__footer .maripozari-cart-note {
+  margin: 0 0 1.2rem;
+  font-size: 1.3rem;
+}
+
+.cart-item__image {
+  border: 0.1rem solid rgb(var(--color-ink));
+  background: rgb(var(--color-paper));
+}
+
+.cart-item__name {
+  font-weight: 500;
+}
+
+.cart-items {
+  border-top: 0.1rem solid rgb(var(--color-ink));
+}
+
+.cart-item {
+  border-bottom: 0.1rem solid rgba(var(--color-ink), 0.12);
+}
+
+.cart__checkout-button {
+  min-height: 4.8rem;
+  letter-spacing: 0.02em;
+}
+
+.product__media-item .media,
+.product__media-item .product-media-container {
+  border: 0.1rem solid rgb(var(--color-ink));
+  background: rgb(var(--color-paper));
+}
+
+.product__title {
+  font-family: var(--font-display-family);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+.product .price-item {
+  font-family: var(--font-body-family);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.product__description {
+  color: rgb(var(--color-ash));
+}
+
+.product__accordion summary {
+  font-weight: 500;
+}

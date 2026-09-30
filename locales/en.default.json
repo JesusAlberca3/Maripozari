@@ -516,6 +516,7 @@
     "about_title": "About the brand",
     "hero_heading": "Mystery, made collectible",
     "empty_cart_note": "No boxes waiting yet. The forest is still quiet.",
+    "filled_cart_note": "A blind box arrives sealed. Shipping is calculated at checkout.",
     "not_found_note": "This page slipped between the trees. Try another path.",
     "surprise_badge": "Surprise"
   },
