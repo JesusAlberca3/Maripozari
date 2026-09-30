@@ -2,6 +2,68 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "maripozari-links": {
+      "type": "maripozari-footer-nav",
+      "blocks": {
+        "catalogo": {
+          "type": "link",
+          "settings": {
+            "label": "Catálogo",
+            "link": "/collections/all"
+          }
+        },
+        "cajas": {
+          "type": "link",
+          "settings": {
+            "label": "Blind box",
+            "link": "/collections/blind-box"
+          }
+        },
+        "figuras": {
+          "type": "link",
+          "settings": {
+            "label": "Figuras",
+            "link": "/collections/figuras"
+          }
+        },
+        "sobre": {
+          "type": "link",
+          "settings": {
+            "label": "Sobre",
+            "link": "/pages/sobre"
+          }
+        },
+        "como": {
+          "type": "link",
+          "settings": {
+            "label": "Cómo funciona",
+            "link": "/pages/como-funciona"
+          }
+        },
+        "preguntas": {
+          "type": "link",
+          "settings": {
+            "label": "Preguntas",
+            "link": "/pages/preguntas"
+          }
+        },
+        "envios": {
+          "type": "link",
+          "settings": {
+            "label": "Envíos",
+            "link": "/pages/envios"
+          }
+        },
+        "contacto": {
+          "type": "link",
+          "settings": {
+            "label": "Contacto",
+            "link": "/pages/contacto"
+          }
+        }
+      },
+      "block_order": ["catalogo", "cajas", "figuras", "sobre", "como", "preguntas", "envios", "contacto"]
+    },
     "footer": {
       "type": "footer",
       "blocks": {},
@@ -23,6 +85,7 @@
     }
   },
   "order": [
+    "maripozari-links",
     "footer"
   ]
 }

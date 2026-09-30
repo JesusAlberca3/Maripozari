@@ -16,14 +16,21 @@
         "price": {
           "type": "price"
         },
+        "mystery": {
+          "type": "text",
+          "settings": {
+            "text": "Caja sellada. El diseño de adentro es al azar, dentro de la serie.",
+            "text_style": "body"
+          }
+        },
         "icons": {
           "type": "icon-with-text",
           "settings": {
             "layout": "horizontal",
-            "icon_1": "star",
-            "heading_1": "Pieza coleccionable",
-            "icon_2": "box",
-            "heading_2": "Revisa si es caja sellada",
+            "icon_1": "box",
+            "heading_1": "Caja sellada",
+            "icon_2": "question_mark",
+            "heading_2": "Diseño sorpresa",
             "icon_3": "truck",
             "heading_3": "El envío se calcula al pagar"
           }
@@ -48,6 +55,14 @@
         "description": {
           "type": "description"
         },
+        "tab_sorpresa": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "La sorpresa",
+            "icon": "question_mark",
+            "content": "<p>No se elige el personaje. Cada caja trae un diseño de la serie, al azar. Las fotos de la ficha muestran la línea, no una promesa de cuál figura te toca.</p><p>Para que el badge Sorpresa aparezca en el catálogo, etiqueta el producto con <em>blind-box</em> o <em>sorpresa</em>.</p>"
+          }
+        },
         "tab_envio": {
           "type": "collapsible_tab",
           "settings": {
@@ -56,20 +71,12 @@
             "content": "<p>El costo y el plazo aparecen al pagar, según la dirección. Si la caja llega dañada, escribe con fotos del empaque y de la pieza.</p>"
           }
         },
-        "tab_cuidado": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Cuidado",
-            "icon": "leaf",
-            "content": "<p>Guárdala lejos del sol directo y de la humedad. Si la caja está sellada, ábrela cuando quieras: el misterio puede esperar.</p>"
-          }
-        },
         "tab_cambios": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Cambios",
             "icon": "return",
-            "content": "<p>Texto base para editar cuando cierres la política. En una blind box, que salga otro diseño de la misma serie no es un defecto: es la sorpresa. Un daño de transporte sí se revisa.</p>"
+            "content": "<p>Texto base para editar. Que salga otro diseño de la misma serie no es un defecto. Un daño de transporte sí se revisa.</p>"
           }
         },
         "share": {
@@ -83,13 +90,14 @@
         "vendor",
         "title",
         "price",
+        "mystery",
         "icons",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
+        "tab_sorpresa",
         "tab_envio",
-        "tab_cuidado",
         "tab_cambios",
         "share"
       ],
@@ -119,7 +127,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "También en la colección",
+        "heading": "Otras cajas",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,

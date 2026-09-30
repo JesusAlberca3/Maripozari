@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "que": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Qué es una blind box?",
+            "icon": "box",
+            "row_content": "<p>Una caja sellada de una serie. Sabes la línea y el precio. El personaje de adentro es al azar.</p>"
+          }
+        },
+        "elegir": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Puedo elegir la figura?",
+            "icon": "question_mark",
+            "row_content": "<p>En una blind box, no. Si la ficha dice que es figura a la vista, lo que ves en las fotos es lo que sale. Esas usan la plantilla Figura.</p>"
+          }
+        },
+        "original": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Son originales?",
+            "icon": "check_mark",
+            "row_content": "<p>La ficha indica la línea (Hirono, Pop Mart u otra) y si la caja está sellada. No digas que eres tienda oficial de una marca salvo que lo escribas ahí, producto por producto.</p>"
+          }
+        },
+        "envio": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Hacen envíos?",
+            "icon": "truck",
+            "row_content": "<p>Sí. El costo y el plazo se calculan al pagar, según la dirección. Los detalles editables están en Envíos.</p>"
+          }
+        },
+        "cambio": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Puedo cambiar si no me gusta el diseño?",
+            "icon": "return",
+            "row_content": "<p>Que salga otro personaje de la misma serie no es un defecto: es la sorpresa. Un daño de transporte sí se revisa, con fotos. Ajusta este párrafo cuando cierres la política.</p>"
+          }
+        },
+        "sticker": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Qué es el sticker sorpresa?",
+            "icon": "heart",
+            "row_content": "<p>Un sticker del bosque que puede acompañar la compra cuando hay stock. No es un producto que se elige en el catálogo.</p>"
+          }
+        },
+        "cuidado": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cómo cuido la caja?",
+            "icon": "leaf",
+            "row_content": "<p>Lejos del sol directo y de la humedad. Si quieres guardar el misterio, no la abras hasta que te dé la gana.</p>"
+          }
+        }
+      },
+      "block_order": ["que", "elegir", "original", "envio", "cambio", "sticker", "cuidado"],
+      "settings": {
+        "caption": "Antes de comprar",
+        "heading": "Preguntas",
+        "heading_size": "h0",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": ["faq"]
+}

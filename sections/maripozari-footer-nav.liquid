@@ -1,0 +1,47 @@
+<nav class="maripozari-footer-nav" aria-label="Páginas de la tienda">
+  <div class="page-width">
+    <ul class="maripozari-footer-nav__list">
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.link | default: routes.root_url | escape }}">{{ block.settings.label | escape }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Enlaces Maripozari",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Enlace",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Texto",
+          "default": "Sobre la marca"
+        },
+        {
+          "type": "text",
+          "id": "link",
+          "label": "Ruta",
+          "info": "Ejemplo: /pages/sobre"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Enlaces Maripozari"
+    }
+  ]
+}
+{% endschema %}

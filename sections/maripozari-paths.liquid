@@ -1,0 +1,65 @@
+<section class="maripozari-paths">
+  <div class="page-width">
+    <ul class="maripozari-paths__list">
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.link | default: routes.all_products_collection_url | escape }}">
+            <span class="maripozari-paths__index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            <h2>{{ block.settings.title }}</h2>
+            {%- if block.settings.text != blank -%}
+              <p>{{ block.settings.text }}</p>
+            {%- endif -%}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Accesos de tienda",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 4,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "type": "path",
+      "name": "Acceso",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "Blind box"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texto",
+          "default": "La caja llega cerrada."
+        },
+        {
+          "type": "text",
+          "id": "link",
+          "label": "Ruta",
+          "info": "Ejemplo: /collections/blind-box o /pages/como-funciona. Tiene que coincidir con el handle que crees en el admin."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accesos de tienda",
+      "blocks": [
+        { "type": "path" },
+        { "type": "path" },
+        { "type": "path" }
+      ]
+    }
+  ]
+}
+{% endschema %}

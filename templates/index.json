@@ -14,10 +14,40 @@
         "padding_bottom": 12
       }
     },
+    "paths": {
+      "type": "maripozari-paths",
+      "blocks": {
+        "cajas": {
+          "type": "path",
+          "settings": {
+            "title": "Blind box",
+            "text": "La caja llega cerrada.",
+            "link": "/collections/blind-box"
+          }
+        },
+        "figuras": {
+          "type": "path",
+          "settings": {
+            "title": "Figuras",
+            "text": "El diseño se ve antes de comprar.",
+            "link": "/collections/figuras"
+          }
+        },
+        "como": {
+          "type": "path",
+          "settings": {
+            "title": "Cómo funciona",
+            "text": "Serie, caja, sorpresa.",
+            "link": "/pages/como-funciona"
+          }
+        }
+      },
+      "block_order": ["cajas", "figuras", "como"]
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Cajas y figuras",
+        "title": "Novedades",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -33,8 +63,8 @@
         "swipe_on_mobile": false,
         "image_ratio": "square",
         "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
+        "show_secondary_image": false,
+        "show_vendor": true,
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
@@ -54,14 +84,15 @@
         "show_logo": true,
         "heading": "Sobre la marca",
         "text": "<p>Maripozari nace alrededor de las blind box y las figuras coleccionables — Hirono, Pop Mart y otras líneas de diseño asiático.</p><p>La identidad se queda en blanco, negro y gris para no competir con las cajas. El color, la sorpresa y el bosque viven en lo que abres.</p>",
-        "button_label": "",
-        "button_link": "",
+        "button_label": "La marca",
+        "button_link": "shopify://pages/sobre",
         "color_scheme": "scheme-1"
       }
     }
   },
   "order": [
     "hero",
+    "paths",
     "featured_collection",
     "kraft_divider",
     "about"

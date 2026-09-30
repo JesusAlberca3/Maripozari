@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "intro": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "La marca",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sobre Maripozari",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Maripozari vende blind box y figuras coleccionables, sobre todo Hirono, Pop Mart y otras líneas de diseño asiático.</p><p>La tienda se queda en blanco, negro y gris para no competir con las cajas. El color, el bosque y el misterio viven en lo que se abre.</p>"
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 12
+      }
+    },
+    "pilares": {
+      "type": "multicolumn",
+      "blocks": {
+        "misterio": {
+          "type": "column",
+          "settings": {
+            "title": "Misterio",
+            "text": "<p>La caja llega cerrada. Elegir la serie ya es parte de coleccionar; el personaje es la sorpresa.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "naturaleza": {
+          "type": "column",
+          "settings": {
+            "title": "Bosque",
+            "text": "<p>Las criaturas de la marca acompañan los vacíos, el 404 y el sticker de regalo. No decoran el catálogo entero.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "coleccion": {
+          "type": "column",
+          "settings": {
+            "title": "Colección",
+            "text": "<p>Objetos con identidad, ediciones y líneas. Cada ficha dice la marca, si está sellada y si el diseño se ve o no.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["misterio", "naturaleza", "coleccion"],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "about": {
+      "type": "maripozari-about",
+      "settings": {
+        "show_logo": true,
+        "heading": "Sin competir con la caja",
+        "text": "<p>En la feria el letrero es blanco a propósito. Aquí pasa lo mismo: el marco es austero para que la figura sea la que tiene color.</p>",
+        "button_label": "Ver el catálogo",
+        "button_link": "shopify://collections/all",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": ["intro", "pilares", "about"]
+}
