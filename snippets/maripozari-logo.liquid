@@ -1,0 +1,36 @@
+{% comment %}
+  Símbolo en móvil, lockup horizontal en escritorio.
+  settings.logo reemplaza el lockup; settings.logo_mobile reemplaza el símbolo.
+{% endcomment %}
+{%- liquid
+  assign logo_alt = shop.name | default: 'maripozari' | escape
+  assign lockup_src = 'logo-horizontal.png' | asset_url
+  assign symbol_src = 'logo-symbol.png' | asset_url
+  assign lockup_width = settings.logo_width | default: 200
+
+  if settings.logo != blank
+    assign lockup_src = settings.logo | image_url: width: 600
+  endif
+
+  if settings.logo_mobile != blank
+    assign symbol_src = settings.logo_mobile | image_url: width: 240
+  endif
+-%}
+<div class="header__heading-logo-wrapper maripozari-logo">
+  <img
+    src="{{ lockup_src }}"
+    class="header__heading-logo header__heading-logo--lockup motion-reduce small-hide medium-hide"
+    width="{{ lockup_width }}"
+    height="56"
+    alt="{{ logo_alt }}"
+    loading="eager"
+  >
+  <img
+    src="{{ symbol_src }}"
+    class="header__heading-logo header__heading-logo--symbol motion-reduce large-up-hide"
+    width="48"
+    height="48"
+    alt="{{ logo_alt }}"
+    loading="eager"
+  >
+</div>

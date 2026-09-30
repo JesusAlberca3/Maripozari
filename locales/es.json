@@ -271,7 +271,7 @@
       }
     },
     "404": {
-      "title": "Página no encontrada",
+      "title": "Esta caja se perdió en el bosque",
       "subtext": "404"
     }
   },
@@ -291,7 +291,7 @@
       "remove_title": "Eliminar {{ title }}",
       "note": "Instrucciones especiales del pedido",
       "checkout": "Pagar pedido",
-      "empty": "Tu carrito esta vacío",
+      "empty": "Tu carrito está vacío... por ahora",
       "product_disclosure": "Aviso sobre el producto",
       "product_disclosures": "Avisos sobre el producto",
       "cart_error": "Hubo un error al actualizar tu carrito de compra. Inténtalo de nuevo.",
@@ -522,6 +522,13 @@
       "how_to_use_gift_card": "Usar el código de la tarjeta de regalo online o el código QR en la tienda",
       "expiration_date": "Caduca el {{ expires_on }}"
     }
+  },
+  "maripozari": {
+    "about_title": "Sobre la marca",
+    "hero_heading": "Misterio para coleccionar",
+    "empty_cart_note": "Todavía no hay ninguna caja esperándote. El bosque sigue quieto.",
+    "not_found_note": "Esta página se escurrió entre los árboles. Prueba otro camino.",
+    "surprise_badge": "Sorpresa"
   },
   "recipient": {
     "form": {

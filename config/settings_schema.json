@@ -1,9 +1,9 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Dawn",
-    "theme_version": "16.0.0",
-    "theme_author": "Shopify",
+    "theme_name": "Maripozari",
+    "theme_version": "1.0.0",
+    "theme_author": "Maripozari",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
   },
@@ -30,6 +30,39 @@
         "id": "favicon",
         "label": "t:settings_schema.logo.settings.favicon.label",
         "info": "t:settings_schema.logo.settings.favicon.info"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_mobile",
+        "label": "Logo móvil (símbolo)",
+        "info": "Si está vacío, se usa el símbolo circular de Maripozari. En escritorio se usa el lockup horizontal."
+      },
+      {
+        "type": "header",
+        "content": "Blind box"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_surprise_badge",
+        "label": "Mostrar badge Sorpresa",
+        "default": true,
+        "info": "Refuerza el misterio de las cajas en las tarjetas de producto."
+      },
+      {
+        "type": "select",
+        "id": "surprise_badge_mode",
+        "label": "Dónde mostrar el badge",
+        "options": [
+          {
+            "value": "tagged",
+            "label": "Solo tags blind-box / sorpresa"
+          },
+          {
+            "value": "all",
+            "label": "Todos los productos"
+          }
+        ],
+        "default": "tagged"
       }
     ]
   },

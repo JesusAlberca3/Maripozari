@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>maripozari — vista de identidad</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="preview.css">
+    <link rel="stylesheet" href="../assets/maripozari.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Saltar al contenido</a>
+
+    <div class="announcement">Cada caja es una sorpresa · Hirono, Pop Mart y más</div>
+
+    <header class="site-header">
+      <button class="icon-btn large-up-hide" type="button" aria-label="Menú">☰</button>
+      <a class="logo-link" href="#main">
+        <img class="header__heading-logo header__heading-logo--lockup small-hide medium-hide" src="../assets/logo-horizontal.png" width="200" height="56" alt="maripozari">
+        <img class="header__heading-logo header__heading-logo--symbol large-up-hide" src="../assets/logo-symbol.png" width="48" height="48" alt="maripozari">
+      </a>
+      <nav class="nav small-hide" aria-label="Principal">
+        <a href="#cajas">Cajas</a>
+        <a href="#marca">Marca</a>
+        <a href="#carrito">Carrito</a>
+        <a href="#perdido">404</a>
+      </nav>
+      <a class="icon-btn" href="#carrito" aria-label="Carrito">○</a>
+    </header>
+
+    <main id="main">
+      <section class="maripozari-hero">
+        <div class="page-width">
+          <div class="maripozari-hero__inner">
+            <img class="maripozari-hero__logo" src="../assets/logo-original.png" width="220" height="253" alt="maripozari">
+            <h1 class="maripozari-hero__heading">Misterio para coleccionar</h1>
+            <p class="maripozari-hero__text">
+              Blind box y figuras con identidad propia. El empaque ya es colorido: la tienda se queda en blanco, negro y gris.
+            </p>
+            <div class="maripozari-hero__actions">
+              <a class="button" href="#cajas">Ver cajas</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cajas" class="page-width catalog">
+        <h2>Cajas y figuras</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="card__media">
+              <span class="card__ph">Hirono</span>
+              <div class="card__badge">
+                <span class="maripozari-surprise-badge">
+                  <img src="../assets/creature-surprise.png" width="22" height="22" alt="">
+                  <span>Sorpresa</span>
+                </span>
+              </div>
+            </div>
+            <h3>Hirono The Other One</h3>
+            <p class="price">Blind box</p>
+          </article>
+          <article class="card">
+            <div class="card__media">
+              <span class="card__ph">Pop Mart</span>
+              <div class="card__badge">
+                <span class="maripozari-surprise-badge">
+                  <img src="../assets/creature-surprise.png" width="22" height="22" alt="">
+                  <span>Sorpresa</span>
+                </span>
+              </div>
+            </div>
+            <h3>Pop Mart — serie misterio</h3>
+            <p class="price">Caja ciega</p>
+          </article>
+          <article class="card">
+            <div class="card__media">
+              <span class="card__ph">Figura</span>
+            </div>
+            <h3>Figura de vitrina</h3>
+            <p class="price">Edición abierta</p>
+          </article>
+          <article class="card">
+            <div class="card__media">
+              <span class="card__ph">Sticker</span>
+            </div>
+            <h3>Pack de stickers</h3>
+            <p class="price">Regalo con compra</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="maripozari-divider maripozari-kraft" aria-hidden="true"></div>
+
+      <section id="marca" class="maripozari-about maripozari-kraft">
+        <div class="page-width">
+          <div class="maripozari-about__inner maripozari-about__inner--split">
+            <div>
+              <img class="maripozari-about__logo" src="../assets/logo-original.png" width="240" height="276" alt="maripozari">
+            </div>
+            <div>
+              <h2 class="maripozari-about__heading">Sobre la marca</h2>
+              <div class="maripozari-about__text">
+                <p>Maripozari nace alrededor de las blind box y las figuras coleccionables — Hirono, Pop Mart y otras líneas de diseño asiático.</p>
+                <p>La identidad se queda en blanco, negro y gris para no competir con las cajas. El color, la sorpresa y el bosque viven en lo que abres.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="carrito" class="page-width state">
+        <h2>Carrito vacío</h2>
+        <div class="maripozari-empty">
+          <img class="maripozari-creature" src="../assets/creature-empty-cart.png" width="180" height="141" alt="">
+          <p class="cart__empty-text">Tu carrito está vacío... por ahora</p>
+          <p class="maripozari-empty__note">Todavía no hay ninguna caja esperándote. El bosque sigue quieto.</p>
+          <a class="button" href="#cajas">Seguir explorando</a>
+        </div>
+      </section>
+
+      <section id="perdido" class="page-width state">
+        <h2>Página 404</h2>
+        <div class="template-404 maripozari-empty">
+          <img class="maripozari-creature" src="../assets/creature-404.png" width="200" height="152" alt="">
+          <p class="maripozari-display">404</p>
+          <h1 class="title">Esta caja se perdió en el bosque</h1>
+          <p class="maripozari-empty__note">Esta página se escurrió entre los árboles. Prueba otro camino.</p>
+          <a class="button" href="#cajas">Seguir explorando</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="../assets/logo-symbol.png" width="40" height="40" alt="">
+      <p>maripozari · blanco, negro y gris · el color va en la caja</p>
+    </footer>
+  </body>
+</html>

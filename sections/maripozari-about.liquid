@@ -1,0 +1,99 @@
+{{ 'maripozari.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-kraft {
+    --maripozari-kraft-image: url({{ 'texture-kraft.png' | asset_url }});
+  }
+{%- endstyle -%}
+
+<section class="maripozari-about maripozari-kraft section-{{ section.id }}-kraft color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    <div class="maripozari-about__inner{% if section.settings.show_logo %} maripozari-about__inner--split{% endif %}">
+      {%- if section.settings.show_logo -%}
+        <div>
+          <img
+            class="maripozari-about__logo"
+            src="{{ 'logo-original.png' | asset_url }}"
+            width="240"
+            height="276"
+            alt="{{ shop.name | escape }}"
+          >
+        </div>
+      {%- endif -%}
+      <div>
+        {%- if section.settings.heading != blank -%}
+          <h2 class="maripozari-about__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="maripozari-about__text rte">{{ section.settings.text }}</div>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <a
+            class="button button--secondary"
+            {% if section.settings.button_link == blank %}
+              role="link"
+              aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+          >
+            {{ section.settings.button_label }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sobre la marca",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_logo",
+      "label": "Mostrar logo original",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "default": "Sobre la marca"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texto",
+      "default": "<p>Maripozari nace alrededor de las blind box y las figuras coleccionables — Hirono, Pop Mart y otras líneas de diseño asiático.</p><p>La identidad se queda en blanco, negro y gris para no competir con las cajas. El color, la sorpresa y el bosque viven en lo que abres.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Botón",
+      "default": ""
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sobre la marca"
+    }
+  ]
+}
+{% endschema %}

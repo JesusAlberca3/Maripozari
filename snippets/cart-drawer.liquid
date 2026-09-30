@@ -30,8 +30,16 @@
       {%- if cart == empty -%}
         <div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
-            <div class="cart-drawer__empty-content">
+            <div class="cart-drawer__empty-content maripozari-empty">
+              <img
+                class="maripozari-creature"
+                src="{{ 'creature-empty-cart.png' | asset_url }}"
+                width="160"
+                height="126"
+                alt=""
+              >
               <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
+              <p class="maripozari-empty__note">{{ 'maripozari.empty_cart_note' | t }}</p>
               <button
                 class="drawer__close"
                 type="button"

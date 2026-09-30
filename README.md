@@ -1,4 +1,43 @@
-# Dawn
+# Maripozari
+
+Tema de la tienda, partido de [Dawn](https://github.com/Shopify/dawn) (Shopify, open source). No uses el editor visual de Shopify como base: el código de este repo es la fuente de verdad.
+
+Identidad, tokens y tono: **[BRAND.md](BRAND.md)**. Léelo antes de pedir un componente nuevo en Cursor.
+
+## Flujo GitHub + Shopify + Cursor
+
+1. **Clona y abre en Cursor**
+   ```sh
+   git clone https://github.com/JesusAlberca3/Maripozari.git
+   cd Maripozari
+   ```
+   Trabaja en una rama de desarrollo, no en la que esté publicada.
+
+2. **Desarrollo local con recarga en vivo**
+   ```sh
+   npm install -g @shopify/cli @shopify/theme
+   shopify theme dev
+   ```
+   Te conecta a la tienda y previsualiza sin publicar.
+
+3. **Subir cambios a Shopify**
+   En el admin: **Tienda online → Temas → Agregar tema → Conectar desde GitHub**. Elige este repo y la rama de desarrollo. Cada push actualiza ese tema. Cuando esté listo, publícalo desde el panel. No conectes la rama publicada si vas a experimentar.
+
+4. **Contexto de marca para Cursor**  
+   `BRAND.md` ya tiene colores (`#000000` / `#FFFFFF` / `#636363`), Lexend + handwritten, uso de logos y dónde van kraft e ilustraciones. No hace falta repetirlo en cada prompt.
+
+5. **Traer actualizaciones de Dawn**
+   ```sh
+   git remote add upstream https://github.com/Shopify/dawn.git
+   git fetch upstream
+   git pull upstream main
+   ```
+
+Vista estática de la identidad (sin tienda Shopify): abre `preview/index.html`.
+
+---
+
+# Dawn (base)
 
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)
