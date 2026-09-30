@@ -120,7 +120,9 @@
         "text": "<p>Maripozari es una tienda de blind box y figuras. La página es blanca a propósito, para mirar la pieza y no el marco.</p><p>El misterio, el bosque y la cultura visual japonesa viven en lo que abres.</p>",
         "button_label": "Sobre la marca",
         "button_link": "shopify://pages/sobre",
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },

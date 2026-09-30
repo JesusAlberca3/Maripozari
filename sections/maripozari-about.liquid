@@ -3,6 +3,15 @@
 {%- style -%}
   .section-{{ section.id }}-kraft {
     --maripozari-kraft-image: url({{ 'texture-kraft.png' | asset_url }});
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-kraft {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
   }
 {%- endstyle -%}
 
@@ -70,13 +79,12 @@
       "type": "richtext",
       "id": "text",
       "label": "Texto",
-      "default": "<p>Maripozari nace alrededor de las blind box y las figuras coleccionables — Hirono, Pop Mart y otras líneas de diseño asiático.</p><p>La identidad se queda en blanco, negro y gris para no competir con las cajas. El color, la sorpresa y el bosque viven en lo que abres.</p>"
+      "default": "<p>Maripozari es una tienda de blind box y figuras. La pagina es blanca a proposito, para mirar la pieza y no el marco.</p>"
     },
     {
       "type": "text",
       "id": "button_label",
-      "label": "Botón",
-      "default": ""
+      "label": "Botón"
     },
     {
       "type": "url",
@@ -88,6 +96,26 @@
       "id": "color_scheme",
       "label": "Esquema de color",
       "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio superior",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio inferior",
+      "default": 36
     }
   ],
   "presets": [
