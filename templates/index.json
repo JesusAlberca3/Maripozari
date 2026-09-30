@@ -48,7 +48,7 @@
       "settings": {
         "title": "Novedades",
         "heading_size": "h2",
-        "description": "Lo último en llegar. En cada ficha se indica si la caja va sellada.",
+        "description": "<p>Lo último en llegar. En cada ficha se indica si la caja va sellada.</p>",
         "show_description": true,
         "description_style": "body",
         "collection": "all",
