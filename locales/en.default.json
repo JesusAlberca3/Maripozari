@@ -262,7 +262,7 @@
       }
     },
     "404": {
-      "title": "Page not found",
+      "title": "This box wandered into the woods",
       "subtext": "404"
     }
   },
@@ -291,7 +291,7 @@
       "new_estimated_total": "New estimated total",
       "note": "Order special instructions",
       "checkout": "Check out",
-      "empty": "Your cart is empty",
+      "empty": "Your cart is empty... for now",
       "product_disclosure": "Product disclosure",
       "product_disclosures": "Product disclosures",
       "cart_error": "There was an error while updating your cart. Please try again.",
@@ -511,6 +511,15 @@
       "copy_code_success": "Code copied successfully",
       "expired": "Expired"
     }
+  },
+  "maripozari": {
+    "about_title": "About the brand",
+    "hero_heading": "Mystery, made collectible",
+    "empty_cart_note": "No boxes waiting yet. The forest is still quiet.",
+    "filled_cart_note": "A blind box arrives sealed. Shipping is calculated at checkout.",
+    "checkout_note": "Payment continues on Shopify's secure page. Shipping is calculated there.",
+    "not_found_note": "This page slipped between the trees. Try another path.",
+    "surprise_badge": "Surprise"
   },
   "recipient": {
     "form": {

@@ -1,0 +1,36 @@
+{% comment %}
+  Badge de misterio para productos blind box.
+  Accepts: product {product}
+{% endcomment %}
+{%- liquid
+  assign show_badge = false
+
+  if settings.show_surprise_badge == false
+    assign show_badge = false
+  elsif settings.surprise_badge_mode == 'all'
+    assign show_badge = true
+  elsif product != blank
+    assign title_down = product.title | downcase
+    assign type_down = product.type | downcase
+    if title_down contains 'blind' or type_down contains 'blind' or type_down contains 'caja ciega'
+      assign show_badge = true
+    endif
+    for tag in product.tags
+      assign tag_down = tag | downcase | strip
+      if tag_down == 'blind-box' or tag_down == 'blindbox' or tag_down == 'sorpresa' or tag_down == 'blind box'
+        assign show_badge = true
+      endif
+    endfor
+  endif
+-%}
+{%- if show_badge -%}
+  <span class="maripozari-surprise-badge">
+    <img
+      src="{{ 'creature-surprise.png' | asset_url }}"
+      width="22"
+      height="22"
+      alt=""
+    >
+    <span>{{ 'maripozari.surprise_badge' | t }}</span>
+  </span>
+{%- endif -%}

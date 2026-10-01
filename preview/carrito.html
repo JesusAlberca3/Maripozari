@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>maripozari — carrito</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="preview.css">
+    <link rel="stylesheet" href="../assets/maripozari.css">
+  </head>
+  <body>
+    <div class="announcement">Cajas selladas · Hirono, Pop Mart y más</div>
+    <header class="site-header">
+      <button class="icon-btn large-up-hide" type="button" aria-label="Menú">☰</button>
+      <a class="logo-link" href="index.html">
+        <img class="header__heading-logo header__heading-logo--lockup small-hide medium-hide" src="../assets/logo-horizontal.png" width="200" height="56" alt="maripozari">
+        <img class="header__heading-logo header__heading-logo--symbol large-up-hide" src="../assets/logo-symbol.png" width="48" height="48" alt="maripozari">
+      </a>
+      <nav class="nav small-hide" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="producto.html">Ficha</a>
+      </nav>
+      <a class="icon-btn" href="carrito.html" aria-label="Carrito">2</a>
+    </header>
+    <main class="page-width cart-preview">
+      <div class="cart-head">
+        <h1 class="maripozari-display display">Tu carrito</h1>
+        <a href="index.html#cajas">Seguir explorando</a>
+      </div>
+      <p class="maripozari-cart-note">Si hay una blind box, llega cerrada. El envío se calcula al pagar.</p>
+      <table class="cart-table">
+        <thead>
+          <tr><th>Producto</th><th>Cantidad</th><th>Total</th></tr>
+        </thead>
+        <tbody>
+          <tr class="cart-item">
+            <td class="cart-product">
+              <img class="cart-item__image" src="../assets/creature-surprise.png" width="96" height="80" alt="">
+              <div>
+                <a class="cart-item__name" href="producto.html">Hirono The Other One</a>
+                <p class="meta">HIRONO · Caja sellada</p>
+                <button type="button">Quitar</button>
+              </div>
+            </td>
+            <td><span class="qty">1</span></td>
+            <td>$24.900</td>
+          </tr>
+          <tr class="cart-item">
+            <td class="cart-product">
+              <img class="cart-item__image" src="../assets/creature-hat.png" width="96" height="72" alt="">
+              <div>
+                <a class="cart-item__name" href="producto.html">Figura de vitrina</a>
+                <p class="meta">POP MART · A la vista</p>
+                <button type="button">Quitar</button>
+              </div>
+            </td>
+            <td><span class="qty">1</span></td>
+            <td>$32.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <aside class="cart-summary cart__blocks">
+        <p>Total estimado <strong>$56.900</strong></p>
+        <p class="maripozari-cart-note">El pago sigue en la página segura de Shopify. Ahí se calcula el envío.</p>
+        <a class="button cart__checkout-button" href="producto.html">Pagar pedido</a>
+      </aside>
+    </main>
+  </body>
+</html>

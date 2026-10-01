@@ -1,0 +1,955 @@
+/* Maripozari brand layer — see BRAND.md */
+
+:root {
+  --color-ink: 0, 0, 0;
+  --color-paper: 255, 255, 255;
+  --color-ash: 99, 99, 99;
+  --font-body-family: 'Lexend', sans-serif;
+  --font-heading-family: 'Lexend', sans-serif;
+  --font-display-family: 'Gaegu', 'Lexend', cursive;
+  --font-body-weight: 400;
+  --font-heading-weight: 400;
+}
+
+body {
+  letter-spacing: 0;
+  color: rgb(var(--color-ink));
+}
+
+.caption-with-letter-spacing,
+.caption,
+.subtitle,
+.product__text,
+.card__information .price,
+.footer-block__details-content {
+  color: rgb(var(--color-ash));
+}
+
+.h0,
+.title--primary,
+.banner__heading,
+.maripozari-display,
+.template-404 .title,
+.cart__empty-text,
+.maripozari-hero__heading,
+.maripozari-about__heading {
+  font-family: var(--font-display-family);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+h1,
+.h1 {
+  font-family: var(--font-display-family);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.header__heading-logo-wrapper.maripozari-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__heading-logo--lockup {
+  width: auto;
+  max-width: min(220px, 36vw);
+  height: auto;
+  max-height: 4.8rem;
+}
+
+.header__heading-logo--symbol {
+  width: 4.8rem;
+  height: 4.8rem;
+  object-fit: contain;
+}
+
+.scrolled-past-header .header__heading-logo--lockup {
+  max-height: 3.6rem;
+}
+
+.maripozari-hero {
+  background: rgb(var(--color-paper));
+  color: rgb(var(--color-ink));
+}
+
+.maripozari-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.4rem;
+  padding: 6rem 2rem 5rem;
+}
+
+.maripozari-hero__logo {
+  width: min(220px, 58vw);
+  height: auto;
+}
+
+.maripozari-hero__heading {
+  font-size: clamp(3.2rem, 6vw, 5.6rem);
+  margin: 0;
+}
+
+.maripozari-hero__text {
+  max-width: 42rem;
+  margin: 0;
+  color: rgb(var(--color-ash));
+  font-size: 1.5rem;
+}
+
+.maripozari-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.maripozari-kraft {
+  background-color: #f4f1ec;
+  background-image: var(--maripozari-kraft-image);
+  background-size: 420px;
+  background-repeat: repeat;
+  color: rgb(var(--color-ink));
+}
+
+.maripozari-divider {
+  min-height: 4.8rem;
+}
+
+.maripozari-about__inner {
+  display: grid;
+  gap: 3.2rem;
+  padding: 5.6rem 0;
+  align-items: center;
+}
+
+@media screen and (min-width: 750px) {
+  .maripozari-about__inner--split {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 6rem;
+  }
+}
+
+.maripozari-about__logo {
+  width: min(240px, 70%);
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.maripozari-about__heading {
+  font-size: clamp(2.8rem, 4vw, 4.4rem);
+  margin: 0 0 1.6rem;
+}
+
+.maripozari-about__text {
+  color: rgb(var(--color-ink));
+  max-width: 48rem;
+}
+
+.maripozari-about__text p {
+  margin: 0 0 1.2rem;
+  color: rgb(var(--color-ash));
+}
+
+.maripozari-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.6rem;
+}
+
+.maripozari-creature {
+  width: min(200px, 56vw);
+  height: auto;
+  display: block;
+  margin: 0 auto 0.8rem;
+}
+
+.cart-drawer__empty-content .maripozari-creature {
+  width: min(160px, 48vw);
+}
+
+.maripozari-empty__note,
+.template-404 .maripozari-empty__note {
+  color: rgb(var(--color-ash));
+  max-width: 36rem;
+  margin: 0;
+}
+
+.maripozari-surprise-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem 0.35rem 0.35rem;
+  border: 0.1rem solid rgb(var(--color-ink));
+  border-radius: 999px;
+  background: rgb(var(--color-paper));
+  color: rgb(var(--color-ink));
+  font-family: var(--font-display-family);
+  font-size: 1.3rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.maripozari-surprise-badge img {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+}
+
+.card__badge .maripozari-surprise-badge {
+  margin-top: 0.6rem;
+}
+
+.button {
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.header-wrapper--border-bottom {
+  border-bottom-color: rgba(var(--color-ink), 0.12);
+}
+
+.announcement-bar {
+  letter-spacing: 0.02em;
+}
+
+.maripozari-paths {
+  padding: 1.2rem 0 3.2rem;
+}
+
+.maripozari-paths__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .maripozari-paths__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .maripozari-paths__list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+#blind-box,
+#figuras,
+#sobre,
+#preguntas,
+#como-funciona {
+  scroll-margin-top: 9rem;
+}
+
+.maripozari-paths__list a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-height: 100%;
+  padding: 2rem;
+  border: 0.1rem solid rgb(var(--color-ink));
+  color: rgb(var(--color-ink));
+  text-decoration: none;
+  background: rgb(var(--color-paper));
+}
+
+.maripozari-paths__list a:hover {
+  background: rgb(var(--color-ink));
+  color: rgb(var(--color-paper));
+}
+
+.maripozari-paths__list a:hover p {
+  color: rgb(var(--color-paper));
+}
+
+.maripozari-creature-img {
+  display: block;
+  width: var(--creature-size, 16rem);
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.maripozari-about .maripozari-creature-img,
+.maripozari-moment .maripozari-creature-img {
+  margin-inline: auto;
+}
+
+.maripozari-paths__list .maripozari-creature-img {
+  width: 7.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.maripozari-steps__list .maripozari-creature-img {
+  width: 8.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.maripozari-faq__layout {
+  display: grid;
+  gap: 2.4rem;
+}
+
+@media screen and (min-width: 990px) {
+  .maripozari-faq__layout {
+    grid-template-columns: minmax(16rem, 0.7fr) minmax(0, 1.4fr);
+    align-items: start;
+    gap: 4rem;
+  }
+}
+
+.maripozari-paths__index {
+  font-family: var(--font-display-family);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.maripozari-paths__list h2 {
+  margin: 0;
+  font-family: var(--font-body-family);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.maripozari-paths__list p {
+  margin: 0;
+  color: rgb(var(--color-ash));
+  font-size: 1.4rem;
+}
+
+.maripozari-footer-nav {
+  border-top: 0.1rem solid rgba(var(--color-ink), 0.12);
+  padding: 3.2rem 0 0.8rem;
+}
+
+.maripozari-footer-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.maripozari-footer-nav__list a {
+  color: rgb(var(--color-ink));
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.maripozari-footer-nav__list a:hover {
+  text-decoration: underline;
+}
+
+.maripozari-faq {
+  padding: 2rem 0 5.6rem;
+}
+
+.maripozari-faq__heading {
+  margin: 0 0 1.2rem;
+  font-family: var(--font-display-family);
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  font-weight: 400;
+}
+
+.maripozari-faq__intro {
+  margin: 0 0 2rem;
+  max-width: 46rem;
+  color: rgb(var(--color-ash));
+}
+
+.maripozari-faq__item {
+  border-top: 0.1rem solid rgba(var(--color-ink), 0.16);
+  padding: 1.4rem 0;
+}
+
+.maripozari-faq__item:last-child {
+  border-bottom: 0.1rem solid rgba(var(--color-ink), 0.16);
+}
+
+.maripozari-faq__item summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.maripozari-faq__item .rte {
+  margin-top: 0.8rem;
+  color: rgb(var(--color-ash));
+}
+
+.maripozari-banner {
+  padding: 2.4rem 0 1.2rem;
+}
+
+.maripozari-banner__panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+  align-items: center;
+  border: 0.1rem solid rgb(var(--color-ink));
+  padding: 2.8rem 2rem;
+  background: rgb(var(--color-paper));
+}
+
+@media screen and (min-width: 990px) {
+  .maripozari-banner__panel {
+    grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.7fr);
+    gap: 4rem;
+    min-height: 42rem;
+    padding: 4.8rem 5.6rem;
+  }
+}
+
+.maripozari-banner__eyebrow {
+  margin: 0 0 1.2rem;
+  color: rgb(var(--color-ash));
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.maripozari-banner__heading {
+  margin: 0 0 1.6rem;
+  font-family: var(--font-display-family);
+  font-size: clamp(4rem, 7vw, 7.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.maripozari-banner__text {
+  margin: 0 0 2.4rem;
+  max-width: 46rem;
+  color: rgb(var(--color-ash));
+  font-size: 1.6rem;
+}
+
+.maripozari-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.maripozari-banner__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.maripozari-banner__visual img {
+  width: min(280px, 70vw);
+  height: auto;
+}
+
+.maripozari-steps {
+  padding: 4.8rem 0;
+  border-top: 0.1rem solid rgb(var(--color-ink));
+  border-bottom: 0.1rem solid rgb(var(--color-ink));
+}
+
+.maripozari-moment--ink {
+  background: rgb(var(--color-ink));
+  color: rgb(var(--color-paper));
+}
+
+.maripozari-moment--ink h2,
+.maripozari-moment--ink .maripozari-moment__heading {
+  color: rgb(var(--color-paper));
+}
+
+.maripozari-moment--ink .maripozari-moment__text,
+.maripozari-moment--ink .maripozari-moment__text p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.maripozari-moment--ink .button--secondary {
+  background: rgb(var(--color-paper));
+  color: rgb(var(--color-ink));
+  border-color: rgb(var(--color-paper));
+}
+
+.maripozari-moment--frame {
+  padding-bottom: 2rem;
+}
+
+.maripozari-moment--frame .maripozari-moment__inner {
+  border: 0.1rem solid rgb(var(--color-ink));
+  padding: 3.2rem 2.4rem;
+}
+
+.maripozari-moment--center .maripozari-moment__inner {
+  justify-items: center;
+  text-align: center;
+}
+
+.maripozari-moment--center .maripozari-moment__text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 750px) {
+  .maripozari-moment--center .maripozari-moment__inner {
+    grid-template-columns: minmax(0, 42rem);
+    justify-content: center;
+  }
+}
+
+.cart__blocks {
+  border: 0.1rem solid rgb(var(--color-ink));
+  padding: 2.4rem 2rem;
+}
+
+.cart__checkout-button {
+  width: 100%;
+}
+
+.drawer__footer .cart__blocks,
+.drawer__footer .cart__ctas {
+  border: 0;
+  padding: 0;
+}
+
+.maripozari-steps__heading {
+  margin: 0 0 2rem;
+  font-family: var(--font-display-family);
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  font-weight: 400;
+}
+
+.maripozari-steps__list {
+  display: grid;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .maripozari-steps__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.maripozari-steps__list li {
+  border-top: 0.1rem solid rgb(var(--color-ink));
+  padding-top: 1.6rem;
+}
+
+.maripozari-steps__index {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-family: var(--font-display-family);
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.maripozari-steps__list h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.maripozari-steps__list p {
+  margin: 0;
+  color: rgb(var(--color-ash));
+}
+
+.maripozari-moment {
+  padding: 2rem 0 5rem;
+}
+
+.maripozari-moment__inner {
+  display: grid;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 750px) {
+  .maripozari-moment__inner {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr);
+    gap: 4.8rem;
+  }
+
+  .maripozari-moment--image-right .maripozari-moment__media {
+    order: 2;
+  }
+}
+
+.maripozari-moment__media img {
+  width: min(280px, 70%);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.maripozari-moment__heading {
+  margin: 0 0 1.2rem;
+  font-family: var(--font-display-family);
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  font-weight: 400;
+}
+
+.maripozari-moment__text {
+  margin: 0 0 2rem;
+  max-width: 46rem;
+  color: rgb(var(--color-ash));
+}
+
+.maripozari-cart-note {
+  margin: 0 0 2.4rem;
+  max-width: 52rem;
+  color: rgb(var(--color-ash));
+}
+
+.drawer__footer .maripozari-cart-note {
+  margin: 0 0 1.2rem;
+  font-size: 1.3rem;
+}
+
+.cart-item__image {
+  border: 0.1rem solid rgb(var(--color-ink));
+  background: rgb(var(--color-paper));
+}
+
+.cart-item__name {
+  font-weight: 500;
+}
+
+.cart-items {
+  border-top: 0.1rem solid rgb(var(--color-ink));
+}
+
+.cart-item {
+  border-bottom: 0.1rem solid rgba(var(--color-ink), 0.12);
+}
+
+.cart__checkout-button {
+  min-height: 4.8rem;
+  letter-spacing: 0.02em;
+}
+
+.product__media-item .media,
+.product__media-item .product-media-container {
+  border: 0.1rem solid rgb(var(--color-ink));
+  background: rgb(var(--color-paper));
+}
+
+.product__title {
+  font-family: var(--font-display-family);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+.product .price-item {
+  font-family: var(--font-body-family);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.product__description {
+  color: rgb(var(--color-ash));
+}
+
+.product__accordion summary {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 749px) {
+  .maripozari-banner {
+    padding: 1.2rem 0 0.4rem;
+  }
+
+  .maripozari-banner__panel {
+    gap: 1.6rem;
+    padding: 2.2rem 1.6rem 2rem;
+  }
+
+  .maripozari-banner__heading {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .maripozari-banner__text {
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .maripozari-banner__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .maripozari-banner__actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .maripozari-banner__visual img {
+    width: min(168px, 48vw);
+  }
+
+  .maripozari-paths {
+    padding: 0.4rem 0 2rem;
+  }
+
+  .maripozari-paths__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .maripozari-paths__list a {
+    padding: 1.4rem 1.2rem 1.6rem;
+  }
+
+  .maripozari-paths__list .maripozari-creature-img {
+    width: 6.4rem;
+  }
+
+  .maripozari-paths__list h2 {
+    font-size: 1.5rem;
+  }
+
+  .maripozari-paths__list p {
+    font-size: 1.2rem;
+  }
+
+  .maripozari-moment {
+    padding: 2.4rem 0;
+  }
+
+  .maripozari-moment__inner {
+    grid-template-columns: 9.2rem minmax(0, 1fr);
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .maripozari-moment .maripozari-creature-img {
+    width: 9.2rem;
+  }
+
+  .maripozari-moment__heading {
+    font-size: 2.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .maripozari-moment__text {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .maripozari-moment--frame .maripozari-moment__inner {
+    padding: 1.4rem;
+  }
+
+  .maripozari-moment--center .maripozari-moment__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .maripozari-moment--center .maripozari-creature-img {
+    width: 12rem;
+  }
+
+  .maripozari-steps {
+    padding: 2.8rem 0;
+  }
+
+  .maripozari-steps__heading {
+    font-size: 3.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .maripozari-steps__list {
+    gap: 0;
+  }
+
+  .maripozari-steps__list li {
+    display: grid;
+    grid-template-columns: 6.4rem minmax(0, 1fr);
+    grid-template-areas:
+      "img index"
+      "img title"
+      "img text";
+    column-gap: 1.2rem;
+    align-items: center;
+    border-top: 0;
+    border-bottom: 0.1rem solid rgba(var(--color-ink), 0.12);
+    padding: 1.4rem 0;
+  }
+
+  .maripozari-steps__list .maripozari-creature-img {
+    grid-area: img;
+    width: 6.4rem;
+    margin: 0;
+  }
+
+  .maripozari-steps__index {
+    grid-area: index;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .maripozari-steps__list h3 {
+    grid-area: title;
+  }
+
+  .maripozari-steps__list p {
+    grid-area: text;
+  }
+
+  .maripozari-about__inner {
+    gap: 1.6rem;
+    padding: 3.2rem 0;
+  }
+
+  .maripozari-about .maripozari-creature-img,
+  .maripozari-about__logo {
+    width: min(160px, 46vw);
+  }
+
+  .maripozari-about__heading {
+    font-size: 3.2rem;
+  }
+
+  .maripozari-faq {
+    padding: 2.4rem 0 3.2rem;
+  }
+
+  .maripozari-faq__intro-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .maripozari-faq .maripozari-creature-img {
+    width: 7.2rem;
+  }
+
+  .maripozari-faq__heading {
+    font-size: 3.2rem;
+    margin: 0;
+  }
+
+  .maripozari-faq__intro {
+    margin: 0.4rem 0 0;
+  }
+
+  .maripozari-faq__item summary {
+    display: flex;
+    align-items: center;
+    min-height: 4.4rem;
+  }
+
+  .cart__blocks {
+    padding: 1.6rem;
+  }
+
+  .product__title {
+    font-size: 3.2rem;
+  }
+
+  .header__heading-logo--symbol {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.maripozari-reel__heading {
+  margin: 0;
+  font-family: var(--font-display-family);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 4vw, 4.2rem);
+}
+
+.maripozari-reviews .maripozari-reel__track {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.maripozari-reviews .maripozari-reel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.maripozari-reviews__card {
+  scroll-snap-align: start;
+  flex: 0 0 88%;
+  border: 0.1rem solid rgb(var(--color-ink));
+  padding: 2rem;
+  background: rgb(var(--color-paper));
+  min-height: 18rem;
+}
+
+@media screen and (min-width: 750px) {
+  .maripozari-reviews__card {
+    flex-basis: calc((100% - 2.4rem) / 3);
+  }
+}
+
+.maripozari-reviews__intro {
+  margin: 0.6rem 0 1.6rem;
+  color: rgb(var(--color-ash));
+  max-width: 42rem;
+}
+
+.maripozari-reviews__stars {
+  margin: 0 0 1.2rem;
+  letter-spacing: 0.18em;
+}
+
+.maripozari-reviews__card blockquote {
+  margin: 0 0 1.6rem;
+  font-size: 1.6rem;
+}
+
+.maripozari-reviews__author {
+  margin: 0;
+  color: rgb(var(--color-ash));
+  font-size: 1.3rem;
+}
+
+.maripozari-reel__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 1.2rem;
+}
+
+.maripozari-reel__dot {
+  width: 4.4rem;
+  height: 2.8rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.maripozari-reel__dot::before {
+  content: '';
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 0.1rem solid rgb(var(--color-ink));
+  background: transparent;
+}
+
+.maripozari-reel__dot[aria-current='true']::before {
+  background: rgb(var(--color-ink));
+}

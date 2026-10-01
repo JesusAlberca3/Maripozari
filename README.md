@@ -1,4 +1,88 @@
-# Dawn
+# Maripozari
+
+Tema de la tienda, partido de [Dawn](https://github.com/Shopify/dawn) (Shopify, open source). No uses el editor visual de Shopify como base: el código de este repo es la fuente de verdad.
+
+Identidad, tokens y tono: **[BRAND.md](BRAND.md)**. Léelo antes de pedir un componente nuevo en Cursor.
+
+## Flujo GitHub + Shopify + Cursor
+
+1. **Clona y abre en Cursor**
+   ```sh
+   git clone https://github.com/JesusAlberca3/Maripozari.git
+   cd Maripozari
+   ```
+   Trabaja en una rama de desarrollo, no en la que esté publicada.
+
+2. **Desarrollo local con recarga en vivo**
+   ```sh
+   npm install -g @shopify/cli @shopify/theme
+   shopify theme dev
+   ```
+   Te conecta a la tienda y previsualiza sin publicar.
+
+3. **Subir cambios a Shopify**
+   En el admin: **Tienda online → Temas → Agregar tema → Conectar desde GitHub**. Elige este repo y la rama de desarrollo. Cada push actualiza ese tema. Cuando esté listo, publícalo desde el panel. No conectes la rama publicada si vas a experimentar.
+
+4. **Contexto de marca para Cursor**  
+   `BRAND.md` ya tiene colores (`#000000` / `#FFFFFF` / `#636363`), Lexend + handwritten, uso de logos y dónde van kraft e ilustraciones. No hace falta repetirlo en cada prompt.
+
+5. **Traer actualizaciones de Dawn**
+   ```sh
+   git remote add upstream https://github.com/Shopify/dawn.git
+   git fetch upstream
+   git pull upstream main
+   ```
+
+Vista estática de la identidad (sin tienda Shopify): abre `preview/index.html`. Las páginas nuevas están en `preview/paginas.html`.
+
+## Páginas y catálogo
+
+El tema ya trae las plantillas. En el admin hay que **crear** las páginas y colecciones con estos handles para que los enlaces funcionen. El contenido vive en la plantilla: el cuerpo de la página puede quedar vacío.
+
+### Páginas (Tienda online → Páginas → Agregar)
+
+| Título | Handle | Plantilla |
+| --- | --- | --- |
+| Sobre la marca | `sobre` | sobre |
+| Cómo funciona | `como-funciona` | como-funciona |
+| Preguntas | `preguntas` | preguntas |
+| Envíos y cambios | `envios` | envios |
+| Contacto | `contacto` | contacto |
+
+### Colecciones (Productos → Colecciones)
+
+| Título | Handle | Tipo sugerido | Plantilla |
+| --- | --- | --- | --- |
+| Blind box | `blind-box` | Automatizada, tag igual a `blind-box` | blind-box |
+| Figuras | `figuras` | Automatizada, tipo de producto igual a `Figura` | figuras |
+
+`/collections/all` ya existe en Shopify.
+
+### Menú principal
+
+En **Tienda online → Navegación**, menú `main-menu`:
+
+1. Blind box → `/collections/blind-box`
+2. Figuras → `/collections/figuras`
+3. Cómo funciona → `/pages/como-funciona`
+4. Contacto → `/pages/contacto`
+
+### Al subir un producto
+
+- **Título** claro, con la serie.
+- **Vendor:** Hirono, Pop Mart u otra línea.
+- **Tipo:** `Blind box` o `Figura`.
+- **Tags:** `blind-box` o `sorpresa` si la caja es ciega (enciende el badge Sorpresa).
+- **Fotos** sobre fondo claro. En blind box, muestra la serie, no prometas un personaje.
+- **Descripción:** qué incluye la serie. Lo de envío, sorpresa y cuidado ya está en la ficha.
+- **Plantilla de tema:** `blind-box` o `figura`. La plantilla por defecto sirve si todavía no eliges.
+- **Precio** y stock. Si hay variantes (por ejemplo set de 1 o de 3), créalas ahí. No uses una variante para “elegir el personaje” de una caja ciega.
+
+Envíos y cambios están escritos como borrador, sin plazos inventados. Edítalos en la plantilla `envios` cuando definas courier y zonas.
+
+---
+
+# Dawn (base)
 
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)

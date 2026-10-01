@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "intro": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Blind box",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cómo funciona",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Eliges una serie, no un personaje. La caja llega cerrada. Abrirla es el misterio.</p>"
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 12
+      }
+    },
+    "pasos": {
+      "type": "multicolumn",
+      "blocks": {
+        "uno": {
+          "type": "column",
+          "settings": {
+            "title": "1. La serie",
+            "text": "<p>Miras la línea — Hirono, Pop Mart u otra — y eliges la caja. Las fotos muestran la serie, no tu figura exacta.</p>",
+            "link_label": "Ver cajas",
+            "link": "shopify://collections/all"
+          }
+        },
+        "dos": {
+          "type": "column",
+          "settings": {
+            "title": "2. La caja",
+            "text": "<p>Llega sellada. El envío se calcula al pagar, según tu dirección.</p>",
+            "link_label": "Envíos",
+            "link": "shopify://pages/envios"
+          }
+        },
+        "tres": {
+          "type": "column",
+          "settings": {
+            "title": "3. La sorpresa",
+            "text": "<p>El diseño es al azar dentro de la serie. A veces la compra incluye un sticker del bosque, cuando hay stock.</p>",
+            "link_label": "Preguntas",
+            "link": "shopify://pages/preguntas"
+          }
+        }
+      },
+      "block_order": ["uno", "dos", "tres"],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": ["intro", "pasos"]
+}

@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "intro": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Para editar",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Envíos y cambios",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Este texto es la base. Cámbialo cuando definas courier, zonas y plazos. No dejes números inventados.</p><p>El costo del envío se calcula al pagar, según la dirección.</p><p>Si la caja llega dañada, escribe a contacto con fotos del empaque y de la pieza.</p><p>En una blind box, que el diseño sea otro personaje de la misma serie no es un defecto. Es la sorpresa.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Escribir",
+            "button_link": "shopify://pages/contacto",
+            "button_style_secondary": false,
+            "button_label_2": "Preguntas",
+            "button_link_2": "shopify://pages/preguntas",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text", "button"],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": ["intro"]
+}

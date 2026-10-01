@@ -1,0 +1,36 @@
+{%- style -%}
+  .section-{{ section.id }}-kraft {
+    --maripozari-kraft-image: url({{ 'texture-kraft.png' | asset_url }});
+    min-height: {{ section.settings.height }}px;
+  }
+{%- endstyle -%}
+
+<div
+  class="maripozari-divider maripozari-kraft section-{{ section.id }}-kraft"
+  aria-hidden="true"
+></div>
+
+{% schema %}
+{
+  "name": "Separador kraft",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "height",
+      "min": 24,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "Altura",
+      "default": 56
+    }
+  ],
+  "presets": [
+    {
+      "name": "Separador kraft"
+    }
+  ]
+}
+{% endschema %}

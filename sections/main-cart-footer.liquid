@@ -105,6 +105,7 @@
               </div>
             {%- else -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
+                <p class="maripozari-cart-note">{{ 'maripozari.checkout_note' | t }}</p>
                 <button
                   type="submit"
                   id="checkout"

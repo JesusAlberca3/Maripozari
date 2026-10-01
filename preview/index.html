@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>maripozari — vista de identidad</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="preview.css">
+    <link rel="stylesheet" href="../assets/maripozari.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Saltar al contenido</a>
+
+    <div class="announcement">Cajas selladas · Hirono, Pop Mart y más</div>
+
+    <header class="site-header">
+      <button class="icon-btn large-up-hide" type="button" aria-label="Menú">☰</button>
+      <a class="logo-link" href="#main">
+        <img class="header__heading-logo header__heading-logo--lockup small-hide medium-hide" src="../assets/logo-horizontal.png" width="200" height="56" alt="maripozari">
+        <img class="header__heading-logo header__heading-logo--symbol large-up-hide" src="../assets/logo-symbol.png" width="48" height="48" alt="maripozari">
+      </a>
+      <nav class="nav small-hide" aria-label="Principal">
+        <a href="#blind-box">Blind box</a>
+        <a href="#figuras">Figuras</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="icon-btn" href="carrito.html" aria-label="Carrito">○</a>
+    </header>
+
+    <main id="main">
+      <section class="maripozari-banner">
+        <div class="page-width">
+          <div class="maripozari-banner__panel">
+            <div class="maripozari-banner__copy">
+              <p class="maripozari-banner__eyebrow">Coleccionables</p>
+              <h1 class="maripozari-banner__heading">Abre cuando quieras</h1>
+              <p class="maripozari-banner__text">Blind box y figuras de Hirono, Pop Mart y otras líneas. Tú eliges la serie. Si la caja está sellada, el personaje espera adentro.</p>
+              <div class="maripozari-banner__actions">
+                <a class="button" href="#cajas">Ver cajas</a>
+                <a class="button button--secondary" href="paginas.html#como">Cómo funciona</a>
+              </div>
+            </div>
+            <div class="maripozari-banner__visual">
+              <img src="../assets/logo-original.png" width="280" height="322" alt="maripozari">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="maripozari-paths">
+        <div class="page-width">
+          <ul class="maripozari-paths__list">
+            <li><a href="#blind-box"><span class="maripozari-paths__index">01</span><h2>Blind box</h2><p>Llega cerrada. El diseño es al azar.</p></a></li>
+            <li><a href="#figuras"><span class="maripozari-paths__index">02</span><h2>Figuras</h2><p>Ves la pieza antes de comprarla.</p></a></li>
+            <li><a href="#sobre"><span class="maripozari-paths__index">03</span><h2>Sobre</h2><p>La tienda es blanca. El color va en la caja.</p></a></li>
+            <li><a href="#preguntas"><span class="maripozari-paths__index">04</span><h2>Preguntas</h2><p>Qué es una blind box y qué se puede cambiar.</p></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="cajas" class="page-width catalog">
+        <h2>Novedades</h2>
+        <p class="lede">Lo último en llegar. En cada ficha se indica si la caja va sellada.</p>
+        <div class="grid">
+          <article class="card">
+            <div class="card__media">
+              <span class="card__ph">Hirono</span>
+              <div class="card__badge">
+                <span class="maripozari-surprise-badge">
+                  <img src="../assets/creature-surprise.png" width="22" height="22" alt="">
+                  <span>Sorpresa</span>
+                </span>
+              </div>
+            </div>
+            <h3>Hirono The Other One</h3>
+            <p class="price">Blind box</p>
+          </article>
+          <article class="card">
+            <div class="card__media">
+              <span class="card__ph">Pop Mart</span>
+              <div class="card__badge">
+                <span class="maripozari-surprise-badge">
+                  <img src="../assets/creature-surprise.png" width="22" height="22" alt="">
+                  <span>Sorpresa</span>
+                </span>
+              </div>
+            </div>
+            <h3>Pop Mart — serie misterio</h3>
+            <p class="price">Caja ciega</p>
+          </article>
+          <article class="card">
+            <div class="card__media">
+              <span class="card__ph">Figura</span>
+            </div>
+            <h3>Figura de vitrina</h3>
+            <p class="price">Edición abierta</p>
+          </article>
+          <article class="card">
+            <div class="card__media">
+              <span class="card__ph">Sticker</span>
+            </div>
+            <h3>Pack de stickers</h3>
+            <p class="price">Regalo con compra</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="maripozari-steps">
+        <div class="page-width">
+          <h2 class="maripozari-steps__heading">Tres momentos</h2>
+          <ol class="maripozari-steps__list">
+            <li><span class="maripozari-steps__index">01</span><h3>La serie</h3><p>Eliges la línea: Hirono, Pop Mart u otra. Las fotos muestran la serie, no una figura prometida.</p></li>
+            <li><span class="maripozari-steps__index">02</span><h3>La caja</h3><p>Si es blind box, viaja sellada. El envío se calcula al pagar, según tu dirección.</p></li>
+            <li><span class="maripozari-steps__index">03</span><h3>La sorpresa</h3><p>El personaje es al azar dentro de la serie. A veces la compra trae un sticker del bosque.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="maripozari-moment maripozari-moment--image-right">
+        <div class="page-width">
+          <div class="maripozari-moment__inner">
+            <div class="maripozari-moment__media">
+              <img src="../assets/creature-surprise.png" width="280" height="220" alt="">
+            </div>
+            <div>
+              <h2 class="maripozari-moment__heading">Un sticker del bosque</h2>
+              <p class="maripozari-moment__text">Con la compra puede venir un sticker que no se elige. Es del mismo universo de criaturas, y aparece cuando hay stock.</p>
+              <a class="button button--secondary" href="paginas.html#como">Cómo funciona</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="maripozari-about maripozari-kraft">
+        <div class="page-width">
+          <div class="maripozari-about__inner maripozari-about__inner--split">
+            <div>
+              <img class="maripozari-about__logo" src="../assets/logo-original.png" width="240" height="276" alt="maripozari">
+            </div>
+            <div>
+              <h2 class="maripozari-about__heading">Sobre</h2>
+              <div class="maripozari-about__text">
+                <p>Maripozari es una tienda de blind box y figuras. La página es blanca a propósito, para mirar la pieza y no el marco.</p>
+                <p>El misterio, el bosque y la cultura visual japonesa viven en lo que abres.</p>
+              </div>
+              <a class="button button--secondary" href="paginas.html#sobre">Sobre la marca</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="blind-box" class="maripozari-moment">
+        <div class="page-width">
+          <div class="maripozari-moment__inner">
+            <div class="maripozari-moment__media"><img src="../assets/creature-surprise.png" width="220" height="180" alt=""></div>
+            <div>
+              <h2 class="maripozari-moment__heading">Blind box</h2>
+              <p class="maripozari-moment__text">Eliges la serie, no el personaje. La caja llega sellada y el diseño de adentro es al azar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="figuras" class="maripozari-moment maripozari-moment--image-right">
+        <div class="page-width">
+          <div class="maripozari-moment__inner">
+            <div class="maripozari-moment__media"><img src="../assets/creature-hat.png" width="220" height="170" alt=""></div>
+            <div>
+              <h2 class="maripozari-moment__heading">Figuras</h2>
+              <p class="maripozari-moment__text">Piezas a la vista. Lo que muestran las fotos es lo que sale: no son cajas ciegas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="preguntas" class="maripozari-faq">
+        <div class="page-width">
+          <h2 class="maripozari-faq__heading">Preguntas</h2>
+          <details class="maripozari-faq__item" open>
+            <summary>¿Qué es una blind box?</summary>
+            <p>Una caja sellada de una serie. El personaje de adentro es al azar.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="carrito" class="page-width state">
+        <h2>Carrito vacío</h2>
+        <div class="maripozari-empty">
+          <img class="maripozari-creature" src="../assets/creature-empty-cart.png" width="180" height="141" alt="">
+          <p class="cart__empty-text">Tu carrito está vacío... por ahora</p>
+          <p class="maripozari-empty__note">Todavía no hay ninguna caja esperándote. El bosque sigue quieto.</p>
+          <a class="button" href="#cajas">Seguir explorando</a>
+        </div>
+      </section>
+
+      <section id="perdido" class="page-width state">
+        <h2>Página 404</h2>
+        <div class="template-404 maripozari-empty">
+          <img class="maripozari-creature" src="../assets/creature-404.png" width="200" height="152" alt="">
+          <p class="maripozari-display">404</p>
+          <h1 class="title">Esta caja se perdió en el bosque</h1>
+          <p class="maripozari-empty__note">Esta página se escurrió entre los árboles. Prueba otro camino.</p>
+          <a class="button" href="#cajas">Seguir explorando</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="../assets/logo-symbol.png" width="40" height="40" alt="">
+      <p>maripozari · blanco, negro y gris · el color va en la caja</p>
+    </footer>
+  </body>
+</html>

@@ -36,9 +36,20 @@
         {{- 'general.continue_shopping' | t -}}
       </a>
     </div>
+    {%- if cart != empty -%}
+      <p class="maripozari-cart-note">{{ 'maripozari.filled_cart_note' | t }}</p>
+    {%- endif -%}
 
-    <div class="cart__warnings">
+    <div class="cart__warnings maripozari-empty">
+      <img
+        class="maripozari-creature"
+        src="{{ 'creature-empty-cart.png' | asset_url }}"
+        width="180"
+        height="141"
+        alt=""
+      >
       <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
+      <p class="maripozari-empty__note">{{ 'maripozari.empty_cart_note' | t }}</p>
       <a href="{{ routes.all_products_collection_url }}" class="button">
         {{ 'general.continue_shopping' | t }}
       </a>
