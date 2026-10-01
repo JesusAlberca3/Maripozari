@@ -274,6 +274,7 @@ h1,
 
 .maripozari-creature-img {
   display: block;
+  width: var(--creature-size, 16rem);
   height: auto;
   max-width: 100%;
   object-fit: contain;
@@ -655,4 +656,206 @@ h1,
 
 .product__accordion summary {
   font-weight: 500;
+}
+
+@media screen and (max-width: 749px) {
+  .maripozari-banner {
+    padding: 1.2rem 0 0.4rem;
+  }
+
+  .maripozari-banner__panel {
+    gap: 1.6rem;
+    padding: 2.2rem 1.6rem 2rem;
+  }
+
+  .maripozari-banner__heading {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .maripozari-banner__text {
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .maripozari-banner__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .maripozari-banner__actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .maripozari-banner__visual img {
+    width: min(168px, 48vw);
+  }
+
+  .maripozari-paths {
+    padding: 0.4rem 0 2rem;
+  }
+
+  .maripozari-paths__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .maripozari-paths__list a {
+    padding: 1.4rem 1.2rem 1.6rem;
+  }
+
+  .maripozari-paths__list .maripozari-creature-img {
+    width: 6.4rem;
+  }
+
+  .maripozari-paths__list h2 {
+    font-size: 1.5rem;
+  }
+
+  .maripozari-paths__list p {
+    font-size: 1.2rem;
+  }
+
+  .maripozari-moment {
+    padding: 2.4rem 0;
+  }
+
+  .maripozari-moment__inner {
+    grid-template-columns: 9.2rem minmax(0, 1fr);
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .maripozari-moment .maripozari-creature-img {
+    width: 9.2rem;
+  }
+
+  .maripozari-moment__heading {
+    font-size: 2.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .maripozari-moment__text {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .maripozari-moment--frame .maripozari-moment__inner {
+    padding: 1.4rem;
+  }
+
+  .maripozari-moment--center .maripozari-moment__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .maripozari-moment--center .maripozari-creature-img {
+    width: 12rem;
+  }
+
+  .maripozari-steps {
+    padding: 2.8rem 0;
+  }
+
+  .maripozari-steps__heading {
+    font-size: 3.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .maripozari-steps__list {
+    gap: 0;
+  }
+
+  .maripozari-steps__list li {
+    display: grid;
+    grid-template-columns: 6.4rem minmax(0, 1fr);
+    grid-template-areas:
+      "img index"
+      "img title"
+      "img text";
+    column-gap: 1.2rem;
+    align-items: center;
+    border-top: 0;
+    border-bottom: 0.1rem solid rgba(var(--color-ink), 0.12);
+    padding: 1.4rem 0;
+  }
+
+  .maripozari-steps__list .maripozari-creature-img {
+    grid-area: img;
+    width: 6.4rem;
+    margin: 0;
+  }
+
+  .maripozari-steps__index {
+    grid-area: index;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .maripozari-steps__list h3 {
+    grid-area: title;
+  }
+
+  .maripozari-steps__list p {
+    grid-area: text;
+  }
+
+  .maripozari-about__inner {
+    gap: 1.6rem;
+    padding: 3.2rem 0;
+  }
+
+  .maripozari-about .maripozari-creature-img,
+  .maripozari-about__logo {
+    width: min(160px, 46vw);
+  }
+
+  .maripozari-about__heading {
+    font-size: 3.2rem;
+  }
+
+  .maripozari-faq {
+    padding: 2.4rem 0 3.2rem;
+  }
+
+  .maripozari-faq__intro-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .maripozari-faq .maripozari-creature-img {
+    width: 7.2rem;
+  }
+
+  .maripozari-faq__heading {
+    font-size: 3.2rem;
+    margin: 0;
+  }
+
+  .maripozari-faq__intro {
+    margin: 0.4rem 0 0;
+  }
+
+  .maripozari-faq__item summary {
+    display: flex;
+    align-items: center;
+    min-height: 4.4rem;
+  }
+
+  .cart__blocks {
+    padding: 1.6rem;
+  }
+
+  .product__title {
+    font-size: 3.2rem;
+  }
+
+  .header__heading-logo--symbol {
+    width: 4rem;
+    height: 4rem;
+  }
 }
