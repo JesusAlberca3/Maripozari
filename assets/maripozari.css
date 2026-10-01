@@ -233,8 +233,22 @@ h1,
 
 @media screen and (min-width: 750px) {
   .maripozari-paths__list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+@media screen and (min-width: 990px) {
+  .maripozari-paths__list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+#blind-box,
+#figuras,
+#sobre,
+#preguntas,
+#como-funciona {
+  scroll-margin-top: 9rem;
 }
 
 .maripozari-paths__list a {
@@ -299,6 +313,42 @@ h1,
 
 .maripozari-footer-nav__list a:hover {
   text-decoration: underline;
+}
+
+.maripozari-faq {
+  padding: 2rem 0 5.6rem;
+}
+
+.maripozari-faq__heading {
+  margin: 0 0 1.2rem;
+  font-family: var(--font-display-family);
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  font-weight: 400;
+}
+
+.maripozari-faq__intro {
+  margin: 0 0 2rem;
+  max-width: 46rem;
+  color: rgb(var(--color-ash));
+}
+
+.maripozari-faq__item {
+  border-top: 0.1rem solid rgba(var(--color-ink), 0.16);
+  padding: 1.4rem 0;
+}
+
+.maripozari-faq__item:last-child {
+  border-bottom: 0.1rem solid rgba(var(--color-ink), 0.16);
+}
+
+.maripozari-faq__item summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.maripozari-faq__item .rte {
+  margin-top: 0.8rem;
+  color: rgb(var(--color-ash));
 }
 
 .maripozari-banner {

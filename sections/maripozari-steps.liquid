@@ -1,4 +1,9 @@
-<section class="maripozari-steps">
+<section
+  {% if section.settings.anchor != blank %}
+    id="{{ section.settings.anchor | escape }}"
+  {% endif %}
+  class="maripozari-steps"
+>
   <div class="page-width">
     {%- if section.settings.heading != blank -%}
       <h2 class="maripozari-steps__heading">{{ section.settings.heading }}</h2>
@@ -27,6 +32,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Ancla"
+    },
     {
       "type": "text",
       "id": "heading",

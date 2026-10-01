@@ -15,7 +15,12 @@
   }
 {%- endstyle -%}
 
-<section class="maripozari-about maripozari-kraft section-{{ section.id }}-kraft color-{{ section.settings.color_scheme }}">
+<section
+  {% if section.settings.anchor != blank %}
+    id="{{ section.settings.anchor | escape }}"
+  {% endif %}
+  class="maripozari-about maripozari-kraft section-{{ section.id }}-kraft color-{{ section.settings.color_scheme }}"
+>
   <div class="page-width">
     <div class="maripozari-about__inner{% if section.settings.show_logo %} maripozari-about__inner--split{% endif %}">
       {%- if section.settings.show_logo -%}
@@ -63,6 +68,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Ancla",
+      "info": "Ejemplo: sobre. Sirve para enlazar desde el menú."
+    },
     {
       "type": "checkbox",
       "id": "show_logo",

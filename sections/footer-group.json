@@ -16,35 +16,35 @@
           "type": "link",
           "settings": {
             "label": "Blind box",
-            "link": "/collections/blind-box"
+            "link": "/#blind-box"
           }
         },
         "figuras": {
           "type": "link",
           "settings": {
             "label": "Figuras",
-            "link": "/collections/figuras"
+            "link": "/#figuras"
           }
         },
         "sobre": {
           "type": "link",
           "settings": {
             "label": "Sobre",
-            "link": "/pages/sobre"
+            "link": "/#sobre"
           }
         },
         "como": {
           "type": "link",
           "settings": {
             "label": "Cómo funciona",
-            "link": "/pages/como-funciona"
+            "link": "/#como-funciona"
           }
         },
         "preguntas": {
           "type": "link",
           "settings": {
             "label": "Preguntas",
-            "link": "/pages/preguntas"
+            "link": "/#preguntas"
           }
         },
         "envios": {

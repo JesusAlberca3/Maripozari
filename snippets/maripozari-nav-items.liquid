@@ -1,0 +1,33 @@
+{% comment %}
+  Enlaces fijos de la tienda. context: 'header' o 'drawer'
+{% endcomment %}
+{%- liquid
+  assign nav_context = context | default: 'header'
+-%}
+{%- if nav_context == 'drawer' -%}
+  <li>
+    <a class="menu-drawer__menu-item link link--text list-menu__item focus-inset" href="{{ routes.root_url }}#blind-box">Blind box</a>
+  </li>
+  <li>
+    <a class="menu-drawer__menu-item link link--text list-menu__item focus-inset" href="{{ routes.root_url }}#figuras">Figuras</a>
+  </li>
+  <li>
+    <a class="menu-drawer__menu-item link link--text list-menu__item focus-inset" href="{{ routes.root_url }}#sobre">Sobre</a>
+  </li>
+  <li>
+    <a class="menu-drawer__menu-item link link--text list-menu__item focus-inset" href="{{ routes.root_url }}#preguntas">Preguntas</a>
+  </li>
+{%- else -%}
+  <li>
+    <a class="header__menu-item list-menu__item link link--text focus-inset" href="{{ routes.root_url }}#blind-box"><span>Blind box</span></a>
+  </li>
+  <li>
+    <a class="header__menu-item list-menu__item link link--text focus-inset" href="{{ routes.root_url }}#figuras"><span>Figuras</span></a>
+  </li>
+  <li>
+    <a class="header__menu-item list-menu__item link link--text focus-inset" href="{{ routes.root_url }}#sobre"><span>Sobre</span></a>
+  </li>
+  <li>
+    <a class="header__menu-item list-menu__item link link--text focus-inset" href="{{ routes.root_url }}#preguntas"><span>Preguntas</span></a>
+  </li>
+{%- endif -%}

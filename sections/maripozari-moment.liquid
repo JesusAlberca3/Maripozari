@@ -1,4 +1,9 @@
-<section class="maripozari-moment{% if section.settings.image_position == 'right' %} maripozari-moment--image-right{% endif %}">
+<section
+  {% if section.settings.anchor != blank %}
+    id="{{ section.settings.anchor | escape }}"
+  {% endif %}
+  class="maripozari-moment{% if section.settings.image_position == 'right' %} maripozari-moment--image-right{% endif %}"
+>
   <div class="page-width">
     <div class="maripozari-moment__inner">
       <div class="maripozari-moment__media">
@@ -47,6 +52,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Ancla",
+      "info": "Ejemplo: blind-box"
+    },
     {
       "type": "select",
       "id": "image",

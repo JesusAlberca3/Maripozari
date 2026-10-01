@@ -1,0 +1,90 @@
+<section
+  {% if section.settings.anchor != blank %}
+    id="{{ section.settings.anchor | escape }}"
+  {% endif %}
+  class="maripozari-faq"
+>
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="maripozari-faq__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <p class="maripozari-faq__intro">{{ section.settings.text }}</p>
+    {%- endif -%}
+    <div class="maripozari-faq__list">
+      {%- for block in section.blocks -%}
+        <details class="maripozari-faq__item" {{ block.shopify_attributes }}{% if forloop.first and section.settings.open_first %} open{% endif %}>
+          <summary>{{ block.settings.heading }}</summary>
+          <div class="rte">{{ block.settings.text }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Preguntas Maripozari",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 8,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Ancla",
+      "default": "preguntas"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "Preguntas"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first",
+      "label": "Abrir la primera",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Pregunta",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Pregunta",
+          "default": "¿Qué es una blind box?"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Respuesta",
+          "default": "<p>Una caja sellada de una serie. Sabes la línea y el precio. El personaje de adentro es al azar.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Preguntas Maripozari",
+      "blocks": [
+        { "type": "question" },
+        { "type": "question" },
+        { "type": "question" }
+      ]
+    }
+  ]
+}
+{% endschema %}
