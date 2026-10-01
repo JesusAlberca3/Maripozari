@@ -19,6 +19,7 @@
         "cajas": {
           "type": "path",
           "settings": {
+            "image": "antler",
             "title": "Blind box",
             "text": "Llega cerrada. El diseño es al azar.",
             "link": "/#blind-box"
@@ -27,6 +28,7 @@
         "figuras": {
           "type": "path",
           "settings": {
+            "image": "hat",
             "title": "Figuras",
             "text": "Ves la pieza antes de comprarla.",
             "link": "/#figuras"
@@ -35,6 +37,7 @@
         "sobre": {
           "type": "path",
           "settings": {
+            "image": "flower",
             "title": "Sobre",
             "text": "La tienda es blanca. El color va en la caja.",
             "link": "/#sobre"
@@ -43,6 +46,7 @@
         "preguntas": {
           "type": "path",
           "settings": {
+            "image": "frog",
             "title": "Preguntas",
             "text": "Qué es una blind box y qué se puede cambiar.",
             "link": "/#preguntas"
@@ -83,7 +87,7 @@
       "type": "maripozari-moment",
       "settings": {
         "anchor": "blind-box",
-        "image": "butterfly",
+        "image": "antler",
         "image_position": "left",
         "heading": "Blind box",
         "text": "<p>Eliges la serie, no el personaje. La caja llega sellada y el diseño de adentro es al azar.</p><p>Cuando subas una caja, márcala con el tag blind-box para que lleve el badge Sorpresa.</p>",
@@ -109,6 +113,7 @@
         "serie": {
           "type": "step",
           "settings": {
+            "image": "branch",
             "title": "La serie",
             "text": "Eliges la línea: Hirono, Pop Mart u otra. Las fotos muestran la serie, no una figura prometida."
           }
@@ -116,6 +121,7 @@
         "caja": {
           "type": "step",
           "settings": {
+            "image": "sprout",
             "title": "La caja",
             "text": "Si es blind box, viaja sellada. El envío se calcula al pagar, según tu dirección."
           }
@@ -123,6 +129,7 @@
         "sorpresa": {
           "type": "step",
           "settings": {
+            "image": "leaf",
             "title": "La sorpresa",
             "text": "El personaje es al azar dentro de la serie. A veces la compra trae un sticker del bosque."
           }
@@ -137,7 +144,7 @@
     "moment": {
       "type": "maripozari-moment",
       "settings": {
-        "image": "butterfly",
+        "image": "mushroom",
         "image_position": "right",
         "heading": "Un sticker del bosque",
         "text": "<p>Con la compra puede venir un sticker que no se elige. Es del mismo universo de criaturas, y aparece cuando hay stock.</p>",
@@ -149,6 +156,7 @@
       "type": "maripozari-about",
       "settings": {
         "show_logo": true,
+        "image": "flower",
         "anchor": "sobre",
         "heading": "Sobre",
         "text": "<p>Maripozari es una tienda de blind box y figuras. La página es blanca a propósito, para mirar la pieza y no el marco.</p><p>El misterio, el bosque y la cultura visual japonesa viven en lo que abres.</p>",
@@ -194,6 +202,7 @@
       "block_order": ["que", "elegir", "original", "cambio"],
       "settings": {
         "anchor": "preguntas",
+        "image": "frog",
         "heading": "Preguntas",
         "text": "Antes de comprar.",
         "open_first": true

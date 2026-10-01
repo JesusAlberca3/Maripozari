@@ -11,6 +11,7 @@
     <ol class="maripozari-steps__list">
       {%- for block in section.blocks -%}
         <li {{ block.shopify_attributes }}>
+          {% render 'maripozari-creature', name: block.settings.image, width: 96 %}
           <span class="maripozari-steps__index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
           <h3>{{ block.settings.title }}</h3>
           {%- if block.settings.text != blank -%}
@@ -49,6 +50,24 @@
       "type": "step",
       "name": "Paso",
       "settings": [
+        {
+          "type": "select",
+          "id": "image",
+          "label": "Ilustración",
+          "options": [
+            { "value": "butterfly", "label": "Mariposa" },
+            { "value": "hat", "label": "Sombrero" },
+            { "value": "mushroom", "label": "Hongo" },
+            { "value": "flower", "label": "Flor" },
+            { "value": "frog", "label": "Rana" },
+            { "value": "mountain", "label": "Montaña" },
+            { "value": "leaf", "label": "Hoja" },
+            { "value": "sprout", "label": "Brote" },
+            { "value": "antler", "label": "Astas" },
+            { "value": "branch", "label": "Rama" }
+          ],
+          "default": "butterfly"
+        },
         {
           "type": "text",
           "id": "title",

@@ -25,13 +25,17 @@
     <div class="maripozari-about__inner{% if section.settings.show_logo %} maripozari-about__inner--split{% endif %}">
       {%- if section.settings.show_logo -%}
         <div>
-          <img
-            class="maripozari-about__logo"
-            src="{{ 'logo-original.png' | asset_url }}"
-            width="240"
-            height="276"
-            alt="{{ shop.name | escape }}"
-          >
+          {%- if section.settings.image == 'logo' or section.settings.image == blank -%}
+            <img
+              class="maripozari-about__logo"
+              src="{{ 'logo-original.png' | asset_url }}"
+              width="240"
+              height="276"
+              alt="{{ shop.name | escape }}"
+            >
+          {%- else -%}
+            {% render 'maripozari-creature', name: section.settings.image, width: 220 %}
+          {%- endif -%}
         </div>
       {%- endif -%}
       <div>
@@ -77,8 +81,27 @@
     {
       "type": "checkbox",
       "id": "show_logo",
-      "label": "Mostrar logo original",
+      "label": "Mostrar imagen",
       "default": true
+    },
+    {
+      "type": "select",
+      "id": "image",
+      "label": "Imagen",
+      "options": [
+        { "value": "logo", "label": "Logo original" },
+        { "value": "butterfly", "label": "Mariposa" },
+        { "value": "hat", "label": "Sombrero" },
+        { "value": "mushroom", "label": "Hongo" },
+        { "value": "flower", "label": "Flor" },
+        { "value": "frog", "label": "Rana" },
+        { "value": "mountain", "label": "Montaña" },
+        { "value": "leaf", "label": "Hoja" },
+        { "value": "sprout", "label": "Brote" },
+        { "value": "antler", "label": "Astas" },
+        { "value": "branch", "label": "Rama" }
+      ],
+      "default": "logo"
     },
     {
       "type": "inline_richtext",

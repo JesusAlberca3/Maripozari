@@ -272,6 +272,41 @@ h1,
   color: rgb(var(--color-paper));
 }
 
+.maripozari-creature-img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.maripozari-about .maripozari-creature-img,
+.maripozari-moment .maripozari-creature-img {
+  margin-inline: auto;
+}
+
+.maripozari-paths__list .maripozari-creature-img {
+  width: 7.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.maripozari-steps__list .maripozari-creature-img {
+  width: 8.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.maripozari-faq__layout {
+  display: grid;
+  gap: 2.4rem;
+}
+
+@media screen and (min-width: 990px) {
+  .maripozari-faq__layout {
+    grid-template-columns: minmax(16rem, 0.7fr) minmax(0, 1.4fr);
+    align-items: start;
+    gap: 4rem;
+  }
+}
+
 .maripozari-paths__index {
   font-family: var(--font-display-family);
   font-size: 2.4rem;

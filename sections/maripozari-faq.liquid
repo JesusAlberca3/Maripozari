@@ -4,13 +4,16 @@
   {% endif %}
   class="maripozari-faq"
 >
-  <div class="page-width">
+  <div class="page-width maripozari-faq__layout">
+    <div class="maripozari-faq__intro-wrap">
+      {% render 'maripozari-creature', name: section.settings.image, width: 140 %}
     {%- if section.settings.heading != blank -%}
       <h2 class="maripozari-faq__heading">{{ section.settings.heading }}</h2>
     {%- endif -%}
     {%- if section.settings.text != blank -%}
       <p class="maripozari-faq__intro">{{ section.settings.text }}</p>
     {%- endif -%}
+    </div>
     <div class="maripozari-faq__list">
       {%- for block in section.blocks -%}
         <details class="maripozari-faq__item" {{ block.shopify_attributes }}{% if forloop.first and section.settings.open_first %} open{% endif %}>
@@ -37,6 +40,24 @@
       "id": "anchor",
       "label": "Ancla",
       "default": "preguntas"
+    },
+    {
+      "type": "select",
+      "id": "image",
+      "label": "Ilustración",
+      "options": [
+        { "value": "butterfly", "label": "Mariposa" },
+        { "value": "hat", "label": "Sombrero" },
+        { "value": "mushroom", "label": "Hongo" },
+        { "value": "flower", "label": "Flor" },
+        { "value": "frog", "label": "Rana" },
+        { "value": "mountain", "label": "Montaña" },
+        { "value": "leaf", "label": "Hoja" },
+        { "value": "sprout", "label": "Brote" },
+        { "value": "antler", "label": "Astas" },
+        { "value": "branch", "label": "Rama" }
+      ],
+      "default": "frog"
     },
     {
       "type": "text",

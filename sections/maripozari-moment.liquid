@@ -7,24 +7,7 @@
   <div class="page-width">
     <div class="maripozari-moment__inner">
       <div class="maripozari-moment__media">
-        {%- liquid
-          case section.settings.image
-            when 'hat'
-              assign moment_image = 'creature-hat.png'
-            when 'mushroom'
-              assign moment_image = 'creature-empty-cart.png'
-            when 'butterfly'
-              assign moment_image = 'creature-surprise.png'
-            else
-              assign moment_image = 'creature-surprise.png'
-          endcase
-        -%}
-        <img
-          src="{{ moment_image | asset_url }}"
-          width="280"
-          height="220"
-          alt=""
-        >
+        {% render 'maripozari-creature', name: section.settings.image, width: 240 %}
       </div>
       <div>
         {%- if section.settings.heading != blank -%}
@@ -65,7 +48,14 @@
       "options": [
         { "value": "butterfly", "label": "Mariposa" },
         { "value": "hat", "label": "Sombrero" },
-        { "value": "mushroom", "label": "Hongo" }
+        { "value": "mushroom", "label": "Hongo" },
+        { "value": "flower", "label": "Flor" },
+        { "value": "frog", "label": "Rana" },
+        { "value": "mountain", "label": "Montaña" },
+        { "value": "leaf", "label": "Hoja" },
+        { "value": "sprout", "label": "Brote" },
+        { "value": "antler", "label": "Astas" },
+        { "value": "branch", "label": "Rama" }
       ],
       "default": "butterfly"
     },

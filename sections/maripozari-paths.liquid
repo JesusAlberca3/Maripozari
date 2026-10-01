@@ -4,6 +4,7 @@
       {%- for block in section.blocks -%}
         <li {{ block.shopify_attributes }}>
           <a href="{{ block.settings.link | default: routes.all_products_collection_url | escape }}">
+            {% render 'maripozari-creature', name: block.settings.image, width: 88 %}
             <span class="maripozari-paths__index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
             <h2>{{ block.settings.title }}</h2>
             {%- if block.settings.text != blank -%}
@@ -30,6 +31,24 @@
       "type": "path",
       "name": "Acceso",
       "settings": [
+        {
+          "type": "select",
+          "id": "image",
+          "label": "Ilustración",
+          "options": [
+            { "value": "butterfly", "label": "Mariposa" },
+            { "value": "hat", "label": "Sombrero" },
+            { "value": "mushroom", "label": "Hongo" },
+            { "value": "flower", "label": "Flor" },
+            { "value": "frog", "label": "Rana" },
+            { "value": "mountain", "label": "Montaña" },
+            { "value": "leaf", "label": "Hoja" },
+            { "value": "sprout", "label": "Brote" },
+            { "value": "antler", "label": "Astas" },
+            { "value": "branch", "label": "Rama" }
+          ],
+          "default": "butterfly"
+        },
         {
           "type": "text",
           "id": "title",

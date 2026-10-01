@@ -1,0 +1,38 @@
+{% comment %}
+  Ilustración de criatura.
+  name: butterfly, hat, mushroom, flower, frog, mountain, leaf, sprout, antler, branch
+  width: tamaño en px
+{% endcomment %}
+{%- liquid
+  case name
+    when 'hat'
+      assign creature_file = 'creature-hat.png'
+    when 'mushroom'
+      assign creature_file = 'creature-mushroom.png'
+    when 'flower'
+      assign creature_file = 'creature-flower.png'
+    when 'frog'
+      assign creature_file = 'creature-frog.png'
+    when 'mountain'
+      assign creature_file = 'creature-mountain.png'
+    when 'leaf'
+      assign creature_file = 'creature-leaf.png'
+    when 'sprout'
+      assign creature_file = 'creature-sprout.png'
+    when 'antler'
+      assign creature_file = 'creature-antler.png'
+    when 'branch'
+      assign creature_file = 'creature-branch.png'
+    else
+      assign creature_file = 'creature-butterfly.png'
+  endcase
+  assign creature_width = width | default: 220
+-%}
+<img
+  class="maripozari-creature-img"
+  src="{{ creature_file | asset_url }}"
+  width="{{ creature_width }}"
+  height="{{ creature_width }}"
+  alt=""
+  style="width: {{ creature_width | divided_by: 10.0 }}rem;"
+>
