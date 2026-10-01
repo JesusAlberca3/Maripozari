@@ -1,16 +1,23 @@
-<section
+<script src="{{ 'maripozari-reel.js' | asset_url }}" defer="defer"></script>
+<maripozari-reel
   {% if section.settings.anchor != blank %}
     id="{{ section.settings.anchor | escape }}"
   {% endif %}
   class="maripozari-steps"
 >
-  <div class="page-width">
+  <div class="page-width maripozari-reel__bar">
     {%- if section.settings.heading != blank -%}
       <h2 class="maripozari-steps__heading">{{ section.settings.heading }}</h2>
     {%- endif -%}
-    <ol class="maripozari-steps__list">
+    <div class="maripozari-reel__controls">
+      <button type="button" data-reel-dir="-1" aria-label="Anterior"><span aria-hidden="true">←</span></button>
+      <button type="button" data-reel-dir="1" aria-label="Siguiente"><span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+  <div class="page-width">
+    <ol class="maripozari-steps__list" data-reel-track>
       {%- for block in section.blocks -%}
-        <li {{ block.shopify_attributes }}>
+        <li data-reel-slide {{ block.shopify_attributes }}>
           {% render 'maripozari-creature', name: block.settings.image, width: 96 %}
           <span class="maripozari-steps__index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
           <h3>{{ block.settings.title }}</h3>
@@ -21,7 +28,7 @@
       {%- endfor -%}
     </ol>
   </div>
-</section>
+</maripozari-reel>
 
 {% schema %}
 {

@@ -460,6 +460,11 @@ h1,
   color: rgb(var(--color-paper));
 }
 
+.maripozari-moment--ink h2,
+.maripozari-moment--ink .maripozari-moment__heading {
+  color: rgb(var(--color-paper));
+}
+
 .maripozari-moment--ink .maripozari-moment__text,
 .maripozari-moment--ink .maripozari-moment__text p {
   color: rgba(255, 255, 255, 0.78);
@@ -858,4 +863,121 @@ h1,
     width: 4rem;
     height: 4rem;
   }
+}
+
+.maripozari-reel__bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.maripozari-reel__heading {
+  margin: 0;
+  font-family: var(--font-display-family);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 4vw, 4.2rem);
+}
+
+.maripozari-reel__controls {
+  display: flex;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.maripozari-reel__controls button {
+  width: 4.4rem;
+  height: 4.4rem;
+  border: 0.1rem solid rgb(var(--color-ink));
+  background: rgb(var(--color-paper));
+  color: rgb(var(--color-ink));
+  cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.maripozari-reel__track,
+.maripozari-paths__list,
+.maripozari-steps__list {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 0.6rem;
+}
+
+.maripozari-paths__list > li,
+.maripozari-steps__list > li,
+.maripozari-reel__slide,
+.maripozari-reviews__card {
+  scroll-snap-align: start;
+  flex: 0 0 86%;
+}
+
+@media screen and (min-width: 750px) {
+  .maripozari-paths__list > li {
+    flex-basis: calc((100% - 1.2rem) / 2);
+  }
+
+  .maripozari-steps__list > li,
+  .maripozari-reviews__card {
+    flex-basis: calc((100% - 2.4rem) / 3);
+  }
+
+  .maripozari-reel__slide {
+    flex-basis: calc((100% - 1.2rem) / 1.35);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .maripozari-paths__list > li {
+    flex-basis: calc((100% - 3.6rem) / 4);
+  }
+}
+
+.maripozari-reel__slide.maripozari-moment {
+  padding: 2rem 1.6rem;
+  margin: 0;
+}
+
+.maripozari-reel__slide .maripozari-moment__inner {
+  grid-template-columns: 8.8rem minmax(0, 1fr);
+  gap: 1.2rem;
+}
+
+.maripozari-steps__list > li {
+  border: 0.1rem solid rgb(var(--color-ink));
+  padding: 1.6rem;
+  display: block;
+}
+
+.maripozari-reviews__intro {
+  margin: 0.6rem 0 0;
+  color: rgb(var(--color-ash));
+  max-width: 42rem;
+}
+
+.maripozari-reviews__card {
+  border: 0.1rem solid rgb(var(--color-ink));
+  padding: 2rem;
+  background: rgb(var(--color-paper));
+  min-height: 18rem;
+}
+
+.maripozari-reviews__stars {
+  margin: 0 0 1.2rem;
+  letter-spacing: 0.18em;
+}
+
+.maripozari-reviews__card blockquote {
+  margin: 0 0 1.6rem;
+  font-size: 1.6rem;
+}
+
+.maripozari-reviews__author {
+  margin: 0;
+  color: rgb(var(--color-ash));
+  font-size: 1.3rem;
 }
