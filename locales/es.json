@@ -528,6 +528,7 @@
     "hero_heading": "Misterio para coleccionar",
     "empty_cart_note": "Todavía no hay ninguna caja esperándote. El bosque sigue quieto.",
     "filled_cart_note": "Si hay una blind box, llega cerrada. El envío se calcula al pagar.",
+    "checkout_note": "El pago sigue en la página segura de Shopify. Ahí se calcula el envío.",
     "not_found_note": "Esta página se escurrió entre los árboles. Prueba otro camino.",
     "surprise_badge": "Sorpresa"
   },

@@ -2,7 +2,7 @@
   {% if section.settings.anchor != blank %}
     id="{{ section.settings.anchor | escape }}"
   {% endif %}
-  class="maripozari-moment{% if section.settings.image_position == 'right' %} maripozari-moment--image-right{% endif %}"
+  class="maripozari-moment maripozari-moment--{{ section.settings.style | default: 'paper' }}{% if section.settings.image_position == 'right' %} maripozari-moment--image-right{% endif %}"
 >
   <div class="page-width">
     <div class="maripozari-moment__inner">
@@ -58,6 +58,18 @@
         { "value": "branch", "label": "Rama" }
       ],
       "default": "butterfly"
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Estilo",
+      "options": [
+        { "value": "paper", "label": "Blanco" },
+        { "value": "ink", "label": "Negro" },
+        { "value": "frame", "label": "Marco" },
+        { "value": "center", "label": "Centrado" }
+      ],
+      "default": "paper"
     },
     {
       "type": "select",

@@ -87,6 +87,7 @@
       "type": "maripozari-moment",
       "settings": {
         "anchor": "blind-box",
+        "style": "ink",
         "image": "antler",
         "image_position": "left",
         "heading": "Blind box",
@@ -99,6 +100,7 @@
       "type": "maripozari-moment",
       "settings": {
         "anchor": "figuras",
+        "style": "frame",
         "image": "hat",
         "image_position": "right",
         "heading": "Figuras",
@@ -144,8 +146,9 @@
     "moment": {
       "type": "maripozari-moment",
       "settings": {
+        "style": "center",
         "image": "mushroom",
-        "image_position": "right",
+        "image_position": "left",
         "heading": "Un sticker del bosque",
         "text": "<p>Con la compra puede venir un sticker que no se elige. Es del mismo universo de criaturas, y aparece cuando hay stock.</p>",
         "button_label": "Cómo funciona",
