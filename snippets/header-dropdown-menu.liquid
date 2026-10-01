@@ -7,7 +7,6 @@
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
-    {% render 'maripozari-nav-items', context: 'header' %}
     {%- if section.settings.menu != blank -%}
     {%- for link in section.settings.menu.links -%}
       <li>
