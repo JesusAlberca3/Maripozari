@@ -68,13 +68,13 @@
         "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "outline",
-        "enable_desktop_slider": true,
-        "swipe_on_mobile": true,
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": false,
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -86,49 +86,30 @@
         "padding_bottom": 20
       }
     },
-    "stories": {
-      "type": "maripozari-stories",
-      "blocks": {
-        "blind": {
-          "type": "story",
-          "settings": {
-            "anchor": "blind-box",
-            "style": "ink",
-            "image": "antler",
-            "heading": "Blind box",
-            "text": "<p>Eliges la serie, no el personaje. La caja llega sellada y el diseño de adentro es al azar.</p>",
-            "button_label": "Ver el catálogo",
-            "button_link": "/collections/all"
-          }
-        },
-        "figuras": {
-          "type": "story",
-          "settings": {
-            "anchor": "figuras",
-            "style": "frame",
-            "image": "hat",
-            "heading": "Figuras",
-            "text": "<p>Piezas a la vista. Lo que muestran las fotos es lo que sale: no son cajas ciegas.</p>",
-            "button_label": "Ver el catálogo",
-            "button_link": "/collections/all"
-          }
-        },
-        "sticker": {
-          "type": "story",
-          "settings": {
-            "anchor": "sticker",
-            "style": "paper",
-            "image": "mushroom",
-            "heading": "Un sticker del bosque",
-            "text": "<p>Con la compra puede venir un sticker que no se elige. Aparece cuando hay stock.</p>",
-            "button_label": "Cómo funciona",
-            "button_link": "/#como-funciona"
-          }
-        }
-      },
-      "block_order": ["blind", "figuras", "sticker"],
+    "blind_box": {
+      "type": "maripozari-moment",
       "settings": {
-        "heading": "La tienda"
+        "anchor": "blind-box",
+        "style": "ink",
+        "image": "antler",
+        "image_position": "left",
+        "heading": "Blind box",
+        "text": "<p>Eliges la serie, no el personaje. La caja llega sellada y el diseño de adentro es al azar.</p>",
+        "button_label": "Ver el catálogo",
+        "button_link": "/collections/all"
+      }
+    },
+    "figuras": {
+      "type": "maripozari-moment",
+      "settings": {
+        "anchor": "figuras",
+        "style": "frame",
+        "image": "hat",
+        "image_position": "right",
+        "heading": "Figuras",
+        "text": "<p>Piezas a la vista. Lo que muestran las fotos es lo que sale: no son cajas ciegas.</p>",
+        "button_label": "Ver el catálogo",
+        "button_link": "/collections/all"
       }
     },
     "steps": {
@@ -163,6 +144,18 @@
       "settings": {
         "anchor": "como-funciona",
         "heading": "Tres momentos"
+      }
+    },
+    "moment": {
+      "type": "maripozari-moment",
+      "settings": {
+        "style": "center",
+        "image": "mushroom",
+        "image_position": "left",
+        "heading": "Un sticker del bosque",
+        "text": "<p>Con la compra puede venir un sticker que no se elige. Aparece cuando hay stock.</p>",
+        "button_label": "Cómo funciona",
+        "button_link": "/#como-funciona"
       }
     },
     "reviews": {
@@ -260,8 +253,10 @@
     "banner",
     "paths",
     "featured_collection",
-    "stories",
+    "blind_box",
+    "figuras",
     "steps",
+    "moment",
     "reviews",
     "about",
     "faq"

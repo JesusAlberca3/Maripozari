@@ -10,14 +10,6 @@
         <p class="maripozari-reviews__intro">{{ section.settings.text }}</p>
       {%- endif -%}
     </div>
-    <div class="maripozari-reel__controls">
-      <button type="button" data-reel-dir="-1" aria-label="Anterior">
-        <span aria-hidden="true">←</span>
-      </button>
-      <button type="button" data-reel-dir="1" aria-label="Siguiente">
-        <span aria-hidden="true">→</span>
-      </button>
-    </div>
   </div>
   <div class="maripozari-reel__viewport page-width">
     <div class="maripozari-reel__track" data-reel-track>
@@ -44,6 +36,7 @@
         {%- endfor -%}
       {%- endif -%}
     </div>
+    <div class="maripozari-reel__dots" data-reel-dots></div>
   </div>
 </maripozari-reel>
 
