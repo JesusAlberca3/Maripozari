@@ -263,12 +263,18 @@ h1,
   background: rgb(var(--color-paper));
 }
 
-.maripozari-paths__list a:hover {
+.maripozari-paths__list a:hover,
+.maripozari-paths__list a:focus-visible {
   background: rgb(var(--color-ink));
   color: rgb(var(--color-paper));
 }
 
-.maripozari-paths__list a:hover p {
+.maripozari-paths__list a:hover h2,
+.maripozari-paths__list a:focus-visible h2,
+.maripozari-paths__list a:hover p,
+.maripozari-paths__list a:focus-visible p,
+.maripozari-paths__list a:hover .maripozari-paths__index,
+.maripozari-paths__list a:focus-visible .maripozari-paths__index {
   color: rgb(var(--color-paper));
 }
 
