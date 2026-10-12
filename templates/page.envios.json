@@ -6,7 +6,7 @@
         "caption": {
           "type": "caption",
           "settings": {
-            "caption": "Para editar",
+            "caption": "Antes de pagar",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -21,7 +21,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Este texto es la base. Cámbialo cuando definas courier, zonas y plazos. No dejes números inventados.</p><p>El costo del envío se calcula al pagar, según la dirección.</p><p>Si la caja llega dañada, escribe a contacto con fotos del empaque y de la pieza.</p><p>En una blind box, que el diseño sea otro personaje de la misma serie no es un defecto. Es la sorpresa.</p>"
+            "text": "<p>El costo y el plazo del envío se calculan al pagar, según tu dirección.</p><p>Si la caja llega dañada, escribe a contacto con fotos del empaque y de la pieza.</p><p>En una blind box, que el diseño sea otro personaje de la misma serie no es un defecto. Es la sorpresa.</p>"
           }
         },
         "button": {

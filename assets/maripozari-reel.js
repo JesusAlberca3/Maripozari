@@ -10,33 +10,46 @@ if (!customElements.get('maripozari-reel')) {
         const slides = Array.from(track.querySelectorAll('[data-reel-slide]'));
         if (!slides.length) return;
 
-        slides.forEach((slide, index) => {
+        const buttons = slides.map((slide, index) => {
           const dot = document.createElement('button');
           dot.type = 'button';
           dot.className = 'maripozari-reel__dot';
-          dot.dataset.index = String(index);
           dot.setAttribute('aria-label', `Reseña ${index + 1} de ${slides.length}`);
-          if (index === 0) dot.setAttribute('aria-current', 'true');
           dot.addEventListener('click', () => {
-            slide.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+            const offset = slide.getBoundingClientRect().left - track.getBoundingClientRect().left;
+            track.scrollTo({ left: track.scrollLeft + offset, behavior: 'smooth' });
           });
           dots.appendChild(dot);
+          return dot;
         });
 
-        const mark = () => {
+        const update = () => {
+          const overflow = track.scrollWidth - track.clientWidth > 4;
+          dots.hidden = !overflow;
+          if (!overflow) return;
+
+          const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
           const origin = track.getBoundingClientRect().left;
           let active = 0;
+          let closest = Infinity;
           slides.forEach((slide, index) => {
-            if (slide.getBoundingClientRect().left - origin <= 24) active = index;
+            const distance = Math.abs(slide.getBoundingClientRect().left - origin);
+            if (distance < closest) {
+              closest = distance;
+              active = index;
+            }
           });
-          dots.querySelectorAll('.maripozari-reel__dot').forEach((dot, index) => {
+          if (atEnd) active = slides.length - 1;
+
+          buttons.forEach((dot, index) => {
             if (index === active) dot.setAttribute('aria-current', 'true');
             else dot.removeAttribute('aria-current');
           });
         };
 
-        track.addEventListener('scroll', mark, { passive: true });
-        mark();
+        track.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        update();
       }
     }
   );

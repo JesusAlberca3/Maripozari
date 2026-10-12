@@ -16,7 +16,7 @@
           "settings": {
             "heading": "¿Puedo elegir la figura?",
             "icon": "question_mark",
-            "row_content": "<p>En una blind box, no. Si la ficha dice que es figura a la vista, lo que ves en las fotos es lo que sale. Esas usan la plantilla Figura.</p>"
+            "row_content": "<p>En una blind box, no. Si la ficha dice que es figura a la vista, lo que ves en las fotos es lo que sale.</p>"
           }
         },
         "original": {
@@ -24,7 +24,7 @@
           "settings": {
             "heading": "¿Son originales?",
             "icon": "check_mark",
-            "row_content": "<p>La ficha indica la línea (Hirono, Pop Mart u otra) y si la caja está sellada. No digas que eres tienda oficial de una marca salvo que lo escribas ahí, producto por producto.</p>"
+            "row_content": "<p>La ficha indica la línea (Hirono, Pop Mart u otra) y si la caja está sellada.</p>"
           }
         },
         "envio": {
@@ -40,7 +40,7 @@
           "settings": {
             "heading": "¿Puedo cambiar si no me gusta el diseño?",
             "icon": "return",
-            "row_content": "<p>Que salga otro personaje de la misma serie no es un defecto: es la sorpresa. Un daño de transporte sí se revisa, con fotos. Ajusta este párrafo cuando cierres la política.</p>"
+            "row_content": "<p>Que salga otro personaje de la misma serie no es un defecto: es la sorpresa. Un daño de transporte sí se revisa, con fotos.</p>"
           }
         },
         "sticker": {
