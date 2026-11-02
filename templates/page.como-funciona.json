@@ -6,7 +6,7 @@
         "caption": {
           "type": "caption",
           "settings": {
-            "caption": "Blind box",
+            "caption": "La compra",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -21,7 +21,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Eliges una serie, no un personaje. La caja llega cerrada. Abrirla es el misterio.</p>"
+            "text": "<p>Hay dos caminos. En una blind box eliges la serie y el personaje es al azar. En una figura, lo de las fotos es lo que sale.</p>"
           }
         }
       },
@@ -32,57 +32,110 @@
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 48,
-        "padding_bottom": 12
+        "padding_bottom": 8
       }
     },
     "pasos": {
-      "type": "multicolumn",
+      "type": "maripozari-steps",
       "blocks": {
-        "uno": {
-          "type": "column",
+        "serie": {
+          "type": "step",
           "settings": {
-            "title": "1. La serie",
-            "text": "<p>Miras la línea — Hirono, Pop Mart u otra — y eliges la caja. Las fotos muestran la serie, no tu figura exacta.</p>",
-            "link_label": "Ver cajas",
-            "link": "shopify://collections/all"
+            "image": "branch",
+            "title": "La serie",
+            "text": "Eliges la línea: Hirono, Pop Mart u otra. En una blind box, las fotos muestran la serie, no una figura prometida."
           }
         },
-        "dos": {
-          "type": "column",
+        "caja": {
+          "type": "step",
           "settings": {
-            "title": "2. La caja",
-            "text": "<p>Llega sellada. El envío se calcula al pagar, según tu dirección.</p>",
-            "link_label": "Envíos",
-            "link": "shopify://pages/envios"
+            "image": "sprout",
+            "title": "La caja",
+            "text": "Si va sellada, viaja cerrada. El envío se calcula al pagar, según tu dirección."
           }
         },
-        "tres": {
-          "type": "column",
+        "pieza": {
+          "type": "step",
           "settings": {
-            "title": "3. La sorpresa",
-            "text": "<p>El diseño es al azar dentro de la serie. A veces la compra incluye un sticker del bosque, cuando hay stock.</p>",
-            "link_label": "Preguntas",
-            "link": "shopify://pages/preguntas"
+            "image": "hat",
+            "title": "La pieza",
+            "text": "Si la ficha dice que es figura a la vista, no hay sorteo. Sale lo que ves."
+          }
+        },
+        "sorpresa": {
+          "type": "step",
+          "settings": {
+            "image": "leaf",
+            "title": "La sorpresa",
+            "text": "En la caja ciega el diseño es al azar dentro de la serie. A veces viene un sticker del bosque, cuando hay stock."
           }
         }
       },
-      "block_order": ["uno", "dos", "tres"],
+      "block_order": ["serie", "caja", "pieza", "sorpresa"],
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 20,
-        "padding_bottom": 48
+        "anchor": "pasos",
+        "heading": ""
+      }
+    },
+    "ciega": {
+      "type": "maripozari-moment",
+      "settings": {
+        "anchor": "blind-box",
+        "style": "frame",
+        "image": "antler",
+        "image_position": "left",
+        "heading": "Lo que sí se elige",
+        "text": "<p>La serie, y si la caja va sellada. El personaje de una blind box no se elige.</p>",
+        "button_label": "Ver cajas",
+        "button_link": "/collections/all"
+      }
+    },
+    "dudas": {
+      "type": "maripozari-faq",
+      "blocks": {
+        "elegir": {
+          "type": "question",
+          "settings": {
+            "heading": "¿Puedo elegir la figura?",
+            "text": "<p>En una blind box, no. Si la ficha es figura a la vista, lo de las fotos es lo que sale.</p>"
+          }
+        },
+        "envio": {
+          "type": "question",
+          "settings": {
+            "heading": "¿Cuándo veo el costo del envío?",
+            "text": "<p>Al pagar, según tu dirección. Antes de eso la tienda no lo calcula.</p>"
+          }
+        },
+        "cambio": {
+          "type": "question",
+          "settings": {
+            "heading": "¿Puedo cambiar si no me gusta el diseño?",
+            "text": "<p>Que salga otro personaje de la misma serie es la sorpresa. Si el empaque llega dañado, lo revisamos con fotos.</p>"
+          }
+        }
+      },
+      "block_order": ["elegir", "envio", "cambio"],
+      "settings": {
+        "anchor": "dudas",
+        "image": "frog",
+        "heading": "Dudas",
+        "text": "Lo demás está en Preguntas.",
+        "open_first": true
+      }
+    },
+    "cierre": {
+      "type": "maripozari-moment",
+      "settings": {
+        "style": "center",
+        "image": "mushroom",
+        "image_position": "left",
+        "heading": "Abre cuando quieras",
+        "text": "<p>La caja puede esperar cerrada. El misterio no tiene prisa.</p>",
+        "button_label": "Ver el catálogo",
+        "button_link": "/collections/all"
       }
     }
   },
-  "order": ["intro", "pasos"]
+  "order": ["intro", "pasos", "ciega", "dudas", "cierre"]
 }
