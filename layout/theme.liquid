@@ -295,6 +295,11 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'maripozari.css' | asset_url | stylesheet_tag }}
+    {% style %}
+      :root {
+        --maripozari-leaf-image: url({{ 'texture-leaves.svg' | asset_url }});
+      }
+    {% endstyle %}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}

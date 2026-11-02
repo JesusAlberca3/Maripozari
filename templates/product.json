@@ -21,11 +21,11 @@
           "settings": {
             "layout": "horizontal",
             "icon_1": "star",
-            "heading_1": "Pieza coleccionable",
+            "heading_1": "De colección",
             "icon_2": "box",
-            "heading_2": "Mira si la caja va sellada",
+            "heading_2": "Si va sellada",
             "icon_3": "truck",
-            "heading_3": "El envío se calcula al pagar"
+            "heading_3": "Envío al pagar"
           }
         },
         "variant_picker": {

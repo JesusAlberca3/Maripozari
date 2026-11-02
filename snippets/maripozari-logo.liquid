@@ -1,11 +1,12 @@
 {% comment %}
-  Símbolo en móvil, lockup horizontal en escritorio.
+  Header negro: lockup blanco en escritorio, símbolo en círculo blanco en móvil.
   settings.logo reemplaza el lockup; settings.logo_mobile reemplaza el símbolo.
+  Esos archivos del editor deben verse sobre negro.
 {% endcomment %}
 {%- liquid
   assign logo_alt = shop.name | default: 'maripozari' | escape
-  assign lockup_src = 'logo-horizontal.png' | asset_url
-  assign symbol_src = 'logo-symbol.png' | asset_url
+  assign lockup_src = 'logo-horizontal-white.png' | asset_url
+  assign symbol_src = 'logo-symbol-white.png' | asset_url
   assign lockup_width = settings.logo_width | default: 200
 
   if settings.logo != blank

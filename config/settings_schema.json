@@ -35,7 +35,7 @@
         "type": "image_picker",
         "id": "logo_mobile",
         "label": "Logo móvil (símbolo)",
-        "info": "Si está vacío, se usa el símbolo circular de Maripozari. En escritorio se usa el lockup horizontal."
+        "info": "Si está vacío, se usa el símbolo blanco de Maripozari. El header es negro: el logo del editor tiene que verse sobre negro."
       },
       {
         "type": "header",

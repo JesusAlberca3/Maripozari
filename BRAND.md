@@ -12,15 +12,17 @@ Tono: cercano, misterioso, coleccionable. Frases cortas. Sin mayúsculas agresiv
 
 Instagram en aplicaciones oficiales: [@maripo.zari](https://instagram.com/maripo.zari)
 
-## Color — paleta estricta
+## Color — paleta
 
-Solo tres valores. No inventar acentos (ni pasteles, ni dorados, ni “un toque de verde bosque”).
+El marco sigue siendo blanco, negro y gris. El header es negro para separarlo de la página. Un verde de hoja seca se usa solo como detalle (franja, números, fondos muy claros), nunca como color de botón ni de texto largo.
 
 | Token        | Hex       | RGB         | Uso                                      |
 | ------------ | --------- | ----------- | ---------------------------------------- |
-| `--color-ink`   | `#000000` | `0, 0, 0`       | Texto, logo, botones, iconos, bordes     |
+| `--color-ink`   | `#000000` | `0, 0, 0`       | Texto, logo sobre blanco, botones, bordes |
 | `--color-paper` | `#FFFFFF` | `255, 255, 255` | Fondo de tienda, botones inversos        |
 | `--color-ash`   | `#636363` | `99, 99, 99`    | Detalles secundarios, captions, hints    |
+| `--color-leaf`  | `#3C4A34` | `60, 74, 52`    | Números, estrellas, línea bajo el header |
+| `--color-leaf-paper` | `#F3F5EE` | `243, 245, 238` | Fondo de accesos y de “Tres momentos” |
 
 En CSS del tema viven como:
 
@@ -29,10 +31,12 @@ En CSS del tema viven como:
   --color-ink: 0, 0, 0;
   --color-paper: 255, 255, 255;
   --color-ash: 99, 99, 99;
+  --color-leaf: 60, 74, 52;
+  --color-leaf-paper: 243, 245, 238;
 }
 ```
 
-Fondo blanco, texto negro. El gris es para lo secundario, nunca como color de marca dominante.
+Fondo blanco, texto negro. El header es la excepción: fondo negro, texto e iconos blancos. El gris es para lo secundario. El verde no pinta botones ni párrafos.
 
 ## Tipografía
 
@@ -59,10 +63,11 @@ Tres versiones oficiales (extraídas del manual, páginas 8–11):
 
 | Archivo                     | Uso                                                          |
 | --------------------------- | ------------------------------------------------------------ |
-| `assets/logo-symbol.png`    | Favicon, header **móvil**, espacios pequeños                 |
-| `assets/logo-horizontal.png`| Header **escritorio**: símbolo + wordmark `maripozari`       |
+| `assets/logo-symbol.png`    | Favicon y espacios pequeños sobre blanco                     |
+| `assets/logo-horizontal.png`| Lockup negro. No va en el header                             |
+| `assets/logo-horizontal-white.png` | Header **escritorio** (fondo negro)                   |
 | `assets/logo-original.png`  | Versión principal: símbolo + wordmark arqueado. Héroes, about |
-| `assets/logo-symbol-white.png` | Solo sobre fondo negro                                     |
+| `assets/logo-symbol-white.png` | Header **móvil** y cualquier fondo negro                 |
 
 El símbolo es el personaje de línea + el kanji **蝶** (mariposa) dentro del círculo. No redibujarlo ni recolorarlo. No poner el lockup horizontal en móvil.
 
@@ -95,10 +100,10 @@ El badge aparece en tarjetas de producto si el producto tiene tag `blind-box`, `
 
 ## Qué no hacer
 
-- No añadir un cuarto color “para destacar un CTA”.
+- No pintar botones ni párrafos de verde. La hoja seca es solo detalle.
 - No usar handwritten en body, precios ni menús.
 - No poner la textura kraft detrás del catálogo.
-- No fotografiar de más el header: el letrero de feria es blanco y mínimo a propósito.
+- No volver el header a blanco: la barra negra separa el menú de la página.
 - No competir con el empaque de las figuras.
 
 ## Flujo de trabajo (Cursor + GitHub + Shopify)
