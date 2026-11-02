@@ -22,7 +22,7 @@ El marco sigue siendo blanco, negro y gris. El header es negro para separarlo de
 | `--color-paper` | `#FFFFFF` | `255, 255, 255` | Fondo de tienda, botones inversos        |
 | `--color-ash`   | `#636363` | `99, 99, 99`    | Detalles secundarios, captions, hints    |
 | `--color-leaf`  | `#3C4A34` | `60, 74, 52`    | Números, estrellas, línea bajo el header |
-| `--color-leaf-paper` | `#F3F5EE` | `243, 245, 238` | Fondo de accesos y de “Tres momentos” |
+| `--color-leaf-paper` | `#F3F5EE` | `243, 245, 238` | Fondo detrás de las tarjetas de accesos. No va bajo párrafos. |
 
 En CSS del tema viven como:
 
