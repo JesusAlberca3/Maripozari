@@ -10,13 +10,19 @@
   }
 </style>
 
-<div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
+<div class="template-404 page-width page-margin center maripozari-empty">
+  <img
+    class="maripozari-creature"
+    src="{{ 'creature-404.png' | asset_url }}"
+    width="200"
+    height="152"
+    alt=""
+  >
+  <p class="maripozari-display">{{ 'templates.404.subtext' | t }}</p>
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
+  <p class="maripozari-empty__note">{{ 'maripozari.not_found_note' | t }}</p>
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
   </a>

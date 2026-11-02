@@ -1,0 +1,161 @@
+{{ 'maripozari.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-kraft {
+    --maripozari-kraft-image: url({{ 'texture-kraft.png' | asset_url }});
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-kraft {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  {% if section.settings.anchor != blank %}
+    id="{{ section.settings.anchor | escape }}"
+  {% endif %}
+  class="maripozari-about maripozari-kraft section-{{ section.id }}-kraft color-{{ section.settings.color_scheme }}"
+>
+  <div class="page-width">
+    <div class="maripozari-about__inner{% if section.settings.show_logo %} maripozari-about__inner--split{% endif %}">
+      {%- if section.settings.show_logo -%}
+        <div>
+          {%- if section.settings.image == 'logo' or section.settings.image == blank -%}
+            <img
+              class="maripozari-about__logo"
+              src="{{ 'logo-original.png' | asset_url }}"
+              width="240"
+              height="276"
+              alt="{{ shop.name | escape }}"
+            >
+          {%- else -%}
+            {% render 'maripozari-creature', name: section.settings.image, width: 220 %}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      <div>
+        {%- if section.settings.heading != blank -%}
+          <h2 class="maripozari-about__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="maripozari-about__text rte">{{ section.settings.text }}</div>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <a
+            class="button button--secondary"
+            {% if section.settings.button_link == blank %}
+              role="link"
+              aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+          >
+            {{ section.settings.button_label }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sobre la marca",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Ancla",
+      "info": "Ejemplo: sobre. Sirve para enlazar desde el menú."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_logo",
+      "label": "Mostrar imagen",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "image",
+      "label": "Imagen",
+      "options": [
+        { "value": "logo", "label": "Logo original" },
+        { "value": "butterfly", "label": "Mariposa" },
+        { "value": "hat", "label": "Sombrero" },
+        { "value": "mushroom", "label": "Hongo" },
+        { "value": "flower", "label": "Flor" },
+        { "value": "frog", "label": "Rana" },
+        { "value": "mountain", "label": "Montaña" },
+        { "value": "leaf", "label": "Hoja" },
+        { "value": "sprout", "label": "Brote" },
+        { "value": "antler", "label": "Astas" },
+        { "value": "branch", "label": "Rama" }
+      ],
+      "default": "logo"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Título",
+      "default": "Sobre la marca"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texto",
+      "default": "<p>Maripozari es una tienda de blind box y figuras. La pagina es blanca a proposito, para mirar la pieza y no el marco.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Botón"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio superior",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio inferior",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sobre la marca"
+    }
+  ]
+}
+{% endschema %}

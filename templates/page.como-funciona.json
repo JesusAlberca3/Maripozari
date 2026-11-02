@@ -1,0 +1,141 @@
+{
+  "sections": {
+    "intro": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "La compra",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cómo funciona",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hay dos caminos. En una blind box eliges la serie y el personaje es al azar. En una figura, lo de las fotos es lo que sale.</p>"
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 8
+      }
+    },
+    "pasos": {
+      "type": "maripozari-steps",
+      "blocks": {
+        "serie": {
+          "type": "step",
+          "settings": {
+            "image": "branch",
+            "title": "La serie",
+            "text": "Eliges la línea: Hirono, Pop Mart u otra. En una blind box, las fotos muestran la serie, no una figura prometida."
+          }
+        },
+        "caja": {
+          "type": "step",
+          "settings": {
+            "image": "sprout",
+            "title": "La caja",
+            "text": "Si va sellada, viaja cerrada. El envío se calcula al pagar, según tu dirección."
+          }
+        },
+        "pieza": {
+          "type": "step",
+          "settings": {
+            "image": "hat",
+            "title": "La pieza",
+            "text": "Si la ficha dice que es figura a la vista, no hay sorteo. Sale lo que ves."
+          }
+        },
+        "sorpresa": {
+          "type": "step",
+          "settings": {
+            "image": "leaf",
+            "title": "La sorpresa",
+            "text": "En la caja ciega el diseño es al azar dentro de la serie. A veces viene un sticker del bosque, cuando hay stock."
+          }
+        }
+      },
+      "block_order": ["serie", "caja", "pieza", "sorpresa"],
+      "settings": {
+        "anchor": "pasos",
+        "heading": ""
+      }
+    },
+    "ciega": {
+      "type": "maripozari-moment",
+      "settings": {
+        "anchor": "blind-box",
+        "style": "frame",
+        "image": "antler",
+        "image_position": "left",
+        "heading": "Lo que sí se elige",
+        "text": "<p>La serie, y si la caja va sellada. El personaje de una blind box no se elige.</p>",
+        "button_label": "Ver cajas",
+        "button_link": "/collections/all"
+      }
+    },
+    "dudas": {
+      "type": "maripozari-faq",
+      "blocks": {
+        "elegir": {
+          "type": "question",
+          "settings": {
+            "heading": "¿Puedo elegir la figura?",
+            "text": "<p>En una blind box, no. Si la ficha es figura a la vista, lo de las fotos es lo que sale.</p>"
+          }
+        },
+        "envio": {
+          "type": "question",
+          "settings": {
+            "heading": "¿Cuándo veo el costo del envío?",
+            "text": "<p>Al pagar, según tu dirección. Antes de eso la tienda no lo calcula.</p>"
+          }
+        },
+        "cambio": {
+          "type": "question",
+          "settings": {
+            "heading": "¿Puedo cambiar si no me gusta el diseño?",
+            "text": "<p>Que salga otro personaje de la misma serie es la sorpresa. Si el empaque llega dañado, lo revisamos con fotos.</p>"
+          }
+        }
+      },
+      "block_order": ["elegir", "envio", "cambio"],
+      "settings": {
+        "anchor": "dudas",
+        "image": "frog",
+        "heading": "Dudas",
+        "text": "Lo demás está en Preguntas.",
+        "open_first": true
+      }
+    },
+    "cierre": {
+      "type": "maripozari-moment",
+      "settings": {
+        "style": "center",
+        "image": "mushroom",
+        "image_position": "left",
+        "heading": "Abre cuando quieras",
+        "text": "<p>La caja puede esperar cerrada. El misterio no tiene prisa.</p>",
+        "button_label": "Ver el catálogo",
+        "button_link": "/collections/all"
+      }
+    }
+  },
+  "order": ["intro", "pasos", "ciega", "dudas", "cierre"]
+}
