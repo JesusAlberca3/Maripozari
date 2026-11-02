@@ -9,7 +9,7 @@
         "button_label": "Ver cajas",
         "button_link": "/collections/all",
         "button_label_2": "Cómo funciona",
-        "button_link_2": "/pages/como-funciona",
+        "button_link_2": "/#como-funciona",
         "visual": "logo"
       }
     },
@@ -120,7 +120,7 @@
           "settings": {
             "image": "branch",
             "title": "La serie",
-            "text": "Eliges la línea: Hirono, Pop Mart u otra. Las fotos muestran la serie, no una figura prometida."
+            "text": "Eliges la línea: Hirono, Pop Mart u otra. En una blind box, las fotos muestran la serie, no una figura prometida."
           }
         },
         "caja": {
@@ -131,19 +131,27 @@
             "text": "Si es blind box, viaja sellada. El envío se calcula al pagar, según tu dirección."
           }
         },
+        "pieza": {
+          "type": "step",
+          "settings": {
+            "image": "hat",
+            "title": "La pieza",
+            "text": "Si la ficha dice que es figura a la vista, no hay sorteo. Sale lo que ves."
+          }
+        },
         "sorpresa": {
           "type": "step",
           "settings": {
             "image": "leaf",
             "title": "La sorpresa",
-            "text": "El personaje es al azar dentro de la serie. A veces la compra trae un sticker del bosque."
+            "text": "En la caja ciega el diseño es al azar dentro de la serie. A veces viene un sticker del bosque, cuando hay stock."
           }
         }
       },
-      "block_order": ["serie", "caja", "sorpresa"],
+      "block_order": ["serie", "caja", "pieza", "sorpresa"],
       "settings": {
         "anchor": "como-funciona",
-        "heading": "Tres momentos"
+        "heading": "Cómo funciona"
       }
     },
     "moment": {

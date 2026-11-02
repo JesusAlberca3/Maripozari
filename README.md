@@ -64,7 +64,7 @@ En **Tienda online → Navegación**, menú `main-menu`:
 
 1. Blind box → `/collections/blind-box`
 2. Figuras → `/collections/figuras`
-3. Cómo funciona → `/pages/como-funciona`
+3. Cómo funciona → `/#como-funciona`
 4. Contacto → `/pages/contacto`
 
 ### Al subir un producto

@@ -124,7 +124,7 @@
         "heading": "Coleccionar con calma",
         "text": "<p>Cada ficha dice la línea y si la caja va sellada. El blanco de la tienda deja el color en la figura.</p>",
         "button_label": "Cómo funciona",
-        "button_link": "/pages/como-funciona"
+        "button_link": "/#como-funciona"
       }
     },
     "related-products": {
